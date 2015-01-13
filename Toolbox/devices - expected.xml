@@ -1,0 +1,599 @@
+
+	<devices>
+		<device type="FPMR ODU" family="ODU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.2.1.1.0">
+			<version svr="2.5.6323">
+				<param type="scalar" name="License_Mask">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.3.3.2.0</oid>
+					<expected>132296</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q8Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.12.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q7Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.13.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q6Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.14.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q5Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.15.0</oid>
+					<expected>10</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q4Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.16.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q3Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.17.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q2Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.18.0</oid>
+					<expected>45</expected>
+				</param>
+				<param type="scalar" name="WFQ_Q1Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.19.0</oid>
+					<expected>5</expected>
+				</param>
+				<param type="scalar" name="Strict_Prio_Queues_Number">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.11.0</oid>
+					<expected>3</expected>
+				</param>
+				<param type="scalar" name="Jumbo_Frame">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.9.3.10.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="table" order="no" name="Classification_Method">
+					<column>
+						<name>fpmrQoSCriteriaName</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.1.1.2</oid>
+					</column>
+					<column>
+						<name>fpmrQoSCriteriaEnabled</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.1.1.3</oid>
+					</column>
+					<expected>VLAN_ID;2</expected>
+					<expected>VLAN priority 802.1p;2</expected>
+					<expected>IPv4/IPv6;1</expected>
+					<expected>L2 or L3 Address Criteria;2</expected>
+					<expected>MPLS label;2</expected>
+					<expected>EtherType;1</expected>
+					<expected>Port;1</expected>
+				</param>
+				<param type="table" order="yes" name="IPv4/IPv6 priority">
+					<column>
+						<name>fpmrIPPriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.4.1.2</oid>
+					</column>
+					
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+				</param>
+				<param type="table" order="no" name="EtherType">
+					<column>
+						<name>fpmrEtherTypeValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.35.1.2</oid>
+					</column>
+					<column>
+						<name>fpmrEtherTypePriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.35.1.3</oid>
+					</column>
+					<expected>35063;7</expected>
+					<expected>2054;7</expected>
+					<expected>34825;4</expected>
+					<expected>35074;4</expected>
+					<expected>33100;4</expected>
+				</param>
+			</version>
+			<version svr="2.5.6327">
+				<param type="scalar" name="License Mask">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.3.3.2.0</oid>
+					<expected>132296</expected>
+				</param>
+				<param type="scalar" name="WFQ Q8Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.12.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q7Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.13.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q6Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.14.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q5Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.15.0</oid>
+					<expected>10</expected>
+				</param>
+				<param type="scalar" name="WFQ Q4Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.16.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q3Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.17.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q2Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.18.0</oid>
+					<expected>45</expected>
+				</param>
+				<param type="scalar" name="WFQ Q1Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.19.0</oid>
+					<expected>5</expected>
+				</param>
+				<param type="scalar" name="Strict Prio Queues Number">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.11.0</oid>
+					<expected>3</expected>
+				</param>
+				<param type="scalar" name="Jumbo Frame">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.9.3.10.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="table" order="no" name="Classification Method">
+					<column>
+						<name>fpmrQoSCriteriaName</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.1.1.2</oid>
+					</column>
+					<column>
+						<name>fpmrQoSCriteriaEnabled</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.1.1.3</oid>
+					</column>
+					<expected>VLAN_ID;2</expected>
+					<expected>VLAN priority 802.1p;2</expected>
+					<expected>IPv4/IPv6;1</expected>
+					<expected>L2 or L3 Address Criteria;2</expected>
+					<expected>MPLS label;2</expected>
+					<expected>EtherType;1</expected>
+					<expected>Port;1</expected>
+				</param>
+				<param type="table" order="yes" name="IPv4/IPv6 priority">
+					<column>
+						<name>fpmrIPPriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.4.1.2</oid>
+					</column>
+					
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+				</param>
+				<param type="table" order="no" name="EtherType">
+					<column>
+						<name>fpmrEtherTypeValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.35.1.2</oid>
+					</column>
+					<column>
+						<name>fpmrEtherTypePriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.35.1.3</oid>
+					</column>
+					<expected>35063;7</expected>
+					<expected>2054;7</expected>
+					<expected>34825;4</expected>
+					<expected>35074;4</expected>
+					<expected>33100;4</expected>
+				</param>
+			</version>
+		</device>
+		<device type="FlexiPacket" family="ODU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.2.1.1.0">
+			<version svr="1.4.3018">
+				<param type="scalar" name="License Mask">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.3.3.2.0</oid>
+					<expected>393407</expected>
+				</param>
+				<param type="scalar" name="Strict Prio Queues Number">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.1.0</oid>
+					<expected>3</expected>
+				</param>
+				<param type="scalar" name="WFQ Q8Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.2.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q7Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.3.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q6Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.4.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q5Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.5.0</oid>
+					<expected>10</expected>
+				</param>
+				<param type="scalar" name="WFQ Q4Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.6.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q3Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.7.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q2Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.8.0</oid>
+					<expected>45</expected>
+				</param>
+				<param type="scalar" name="WFQ Q1Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.9.0</oid>
+					<expected>5</expected>
+				</param>
+				<param type="table" order="no" name="Classification Method">
+					<column>
+						<name>flexiPacketQoSCriteriaName</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.1.1.2</oid>
+					</column>
+					<column>
+						<name>flexiPacketQoSCriteriaEnabled</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.1.1.3</oid>
+					</column>
+					<expected>VLAN_ID;2</expected>
+					<expected>VLAN priority 802.1p;2</expected>
+					<expected>IPv4/IPv6;1</expected>
+					<expected>MPLS label;2</expected>
+					<expected>EtherType;1</expected>
+					<expected>Port;1</expected>
+				</param>
+				<param type="table" order="yes" name="IPv4/IPv6 priority">
+					<column>
+						<name>flexiPacketIPPriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.4.1.2</oid>
+					</column>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+				</param>
+				<param type="table" order="no" name="EtherType">
+					<column>
+						<name>flexiPacketEtherTypeValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.21.1.2</oid>
+					</column>
+					<column>
+						<name>flexiPacketEtherTypePriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.21.1.3</oid>
+					</column>
+					<expected>35063;7</expected>
+					<expected>2054;7</expected>
+					<expected>34825;4</expected>
+					<expected>35074;4</expected>
+					<expected>33100;4</expected>
+				</param>
+			</version>
+		<version svr="1.4.3018">
+				<param type="scalar" name="License Mask">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.3.3.2.0</oid>
+					<expected>393407</expected>
+				</param>
+				<param type="scalar" name="Strict Prio Queues Number">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.1.0</oid>
+					<expected>3</expected>
+				</param>
+				<param type="scalar" name="WFQ Q8Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.2.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q7Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.3.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q6Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.4.0</oid>
+					<expected>1</expected>
+				</param>
+				<param type="scalar" name="WFQ Q5Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.5.0</oid>
+					<expected>10</expected>
+				</param>
+				<param type="scalar" name="WFQ Q4Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.6.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q3Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.7.0</oid>
+					<expected>20</expected>
+				</param>
+				<param type="scalar" name="WFQ Q2Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.8.0</oid>
+					<expected>45</expected>
+				</param>
+				<param type="scalar" name="WFQ Q1Weight">
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.9.0</oid>
+					<expected>5</expected>
+				</param>
+				<param type="table" order="no" name="Classification Method">
+					<column>
+						<name>flexiPacketQoSCriteriaName</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.1.1.2</oid>
+					</column>
+					<column>
+						<name>flexiPacketQoSCriteriaEnabled</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.1.1.3</oid>
+					</column>
+					<expected>VLAN_ID;2</expected>
+					<expected>VLAN priority 802.1p;2</expected>
+					<expected>IPv4/IPv6;1</expected>
+					<expected>MPLS label;2</expected>
+					<expected>EtherType;1</expected>
+					<expected>Port;1</expected>
+				</param>
+				<param type="table" order="yes" name="IPv4/IPv6 priority">
+					<column>
+						<name>flexiPacketIPPriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.4.1.2</oid>
+					</column>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>2</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>1</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>3</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>5</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>7</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>0</expected>
+					<expected>6</expected>
+				</param>
+				<param type="table" order="no" name="EtherType">
+					<column>
+						<name>flexiPacketEtherTypeValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.21.1.2</oid>
+					</column>
+					<column>
+						<name>flexiPacketEtherTypePriorityValue</name>
+						<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.21.1.3</oid>
+					</column>
+					<expected>35063;7</expected>
+					<expected>2054;7</expected>
+					<expected>34825;4</expected>
+					<expected>35074;4</expected>
+					<expected>33100;4</expected>
+				</param>
+			</version>
+		</device>
+		<device type="flexiMwrFlexiPacket Hub 800" family="IDU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.2.1.1.0">
+			<version svr="2.8.32">
+			</version>
+		</device>
+		<device type="flexiMwrFlexiPacket Hub 800" family="IDU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.2.1.1.0">
+			<version svr="2.8.32">
+			</version>
+		</device>		
+	</devices>

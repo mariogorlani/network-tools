@@ -1,0 +1,1703 @@
+INFO   2014-12-09 09:31:32[Main] Network audit.
+INFO   2014-12-09 09:31:32[Main] Network Audit running on the servers: uknetvab,uknetvac,uknetvad,uknetvae,uknetvag,uknetvah,uknetvai,uknetvaj
+INFO   2014-12-09 09:31:32[Main] started at: Tue Dec 09 09:31:32 GMT 2014
+INFO   2014-12-09 09:31:32[XMLReader] Family:ODU Version:{2.5={WFQ_Q8Weight=Type: scalar order: false oids: [[Ljava.lang.String;@1500b2f3] expected: [null], WFQ_Q2Weight=Type: scalar order: false oids: [[Ljava.lang.String;@7eecb5b8] expected: [null], JumboFrame=Type: scalar order: false oids: [[Ljava.lang.String;@126253fd] expected: [null], Tx=Type: scalar order: false oids: [[Ljava.lang.String;@57db2b13] expected: [null], WFQ_Q1Weight=Type: scalar order: false oids: [[Ljava.lang.String;@475c9c31] expected: [null], Rx=Type: scalar order: false oids: [[Ljava.lang.String;@5c86a017] expected: [null], Channel=Type: scalar order: false oids: [[Ljava.lang.String;@5c7bfdc1] expected: [null], Synch=Type: scalar order: false oids: [[Ljava.lang.String;@5276d6ee] expected: [null], Max_Tx_Power=Type: scalar order: false oids: [[Ljava.lang.String;@71687585] expected: [null], WFQ_Q3Weight=Type: scalar order: false oids: [[Ljava.lang.String;@1807f5a7] expected: [null], EtherType=Type: table order: false oids: [[Ljava.lang.String;@1b919693, [Ljava.lang.String;@7fb4f2a9] expected: null, WFQ_Q7Weight=Type: scalar order: false oids: [[Ljava.lang.String;@4dc27487] expected: [null], StrictPriorityQueueNum=Type: scalar order: false oids: [[Ljava.lang.String;@6a4f1a55] expected: [null], QoSCriteriaEnabled=Type: table order: false oids: [[Ljava.lang.String;@7dfd3c81, [Ljava.lang.String;@2584b82d] expected: null, WFQ_Q5Weight=Type: scalar order: false oids: [[Ljava.lang.String;@7bbc8656] expected: [null], WFQ_Q6Weight=Type: scalar order: false oids: [[Ljava.lang.String;@6933b6c6] expected: [null], ACM_Most_Robust_profile=Type: scalar order: false oids: [[Ljava.lang.String;@7d3e8655] expected: [null], ATPC=Type: scalar order: false oids: [[Ljava.lang.String;@7dfb0c0f] expected: [null], WFQ_Q4Weight=Type: scalar order: false oids: [[Ljava.lang.String;@626abbd0] expected: [null], License_Mask=Type: scalar order: false oids: [[Ljava.lang.String;@169bb4dd] expected: [null], IPPriority=Type: table order: true oids: [[Ljava.lang.String;@1f9e9475] expected: null, ACM_Static_Tx_Profile=Type: scalar order: false oids: [[Ljava.lang.String;@3aa078fd] expected: [null]}}
+INFO   2014-12-09 09:31:32[XMLReader] Family:ODU Version:{1.4={WFQ_Q8Weight=Type: scalar order: false oids: [[Ljava.lang.String;@d23e042] expected: [null], WFQ_Q2Weight=Type: scalar order: false oids: [[Ljava.lang.String;@46d59067] expected: [null], Tx=Type: scalar order: false oids: [[Ljava.lang.String;@2d0399f4] expected: [null], WFQ_Q1Weight=Type: scalar order: false oids: [[Ljava.lang.String;@14dd7b39] expected: [null], Rx=Type: scalar order: false oids: [[Ljava.lang.String;@66ea810] expected: [null], Channel=Type: scalar order: false oids: [[Ljava.lang.String;@6cd24612] expected: [null], Synch=Type: scalar order: false oids: [[Ljava.lang.String;@5dafbe45] expected: [null], Max_Tx_Power=Type: scalar order: false oids: [[Ljava.lang.String;@2254127a] expected: [null], WFQ_Q3Weight=Type: scalar order: false oids: [[Ljava.lang.String;@51891008] expected: [null], EtherType=Type: table order: false oids: [[Ljava.lang.String;@2f953efd, [Ljava.lang.String;@f68f0dc] expected: null, WFQ_Q7Weight=Type: scalar order: false oids: [[Ljava.lang.String;@d2de489] expected: [null], StrictPriorityQueueNum=Type: scalar order: false oids: [[Ljava.lang.String;@14bdbc74] expected: [null], QoSCriteriaEnabled=Type: table order: false oids: [[Ljava.lang.String;@12591ac8, [Ljava.lang.String;@5a7fe64f] expected: null, WFQ_Q5Weight=Type: scalar order: false oids: [[Ljava.lang.String;@38145825] expected: [null], License Mask=Type: scalar order: false oids: [[Ljava.lang.String;@41330d4f] expected: [null], WFQ_Q6Weight=Type: scalar order: false oids: [[Ljava.lang.String;@1b66c0fb] expected: [null], ACM_Most_Robust_profile=Type: scalar order: false oids: [[Ljava.lang.String;@3e0e1046] expected: [null], ATPC=Type: scalar order: false oids: [[Ljava.lang.String;@24c1b2d2] expected: [null], WFQ_Q4Weight=Type: scalar order: false oids: [[Ljava.lang.String;@7dc19a70] expected: [null], IPPriority=Type: table order: true oids: [[Ljava.lang.String;@508dec2b] expected: null, ACM_Static_Tx_Profile=Type: scalar order: false oids: [[Ljava.lang.String;@1e4f4a5c] expected: [null]}}
+INFO   2014-12-09 09:31:32[XMLReader] Family:IDU Version:{5.0.10.12={}}
+INFO   2014-12-09 09:31:32[XMLReader] Family:IDU Version:{2.8={Synch=Type: table order: false oids: [[Ljava.lang.String;@37313c65, [Ljava.lang.String;@465232e9, [Ljava.lang.String;@798162bc, [Ljava.lang.String;@1df8da7a] expected: null}}
+INFO   2014-12-09 09:31:32[XMLReader] Family:IDU Version:{2.1.11={}}
+INFO   2014-12-09 09:31:37[utils.MDBReader] extractNEs: uknetvab map file contains 1551; including 131 disabled NEs
+INFO   2014-12-09 09:31:37[utils.MDBReader] VFE for uknetvab are 1197
+INFO   2014-12-09 09:31:43[NVDBReader] extractType null for 4062_ZBP_12 count 844
+INFO   2014-12-09 09:31:43[NVDBReader] extractType null for 1199_ZDA_12 count 878
+INFO   2014-12-09 09:31:43[NVDBReader] extractType null for 1199_ZDA_12 count 1481
+INFO   2014-12-09 09:31:43[NVDBReader] extractType null for 38203_ZEA_11 count 1503
+INFO   2014-12-09 09:31:50[NVDBReader] extractDisconnections found null count 171 no more existing!
+INFO   2014-12-09 09:31:51[utils.MDBReader] extractNEs: uknetvac map file contains 1680; including 103 disabled NEs
+INFO   2014-12-09 09:31:51[utils.MDBReader] VFE for uknetvac are 1245
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0149_ZDA_12 count 506
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 35771_ZD_15 count 734
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 74745_ZEA_11 count 737
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 74745_ZD_11 count 739
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 3826_ZA_21 count 760
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 3826_ZA_22 count 763
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 15315_ZC_13 count 1110
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZC_13 count 1203
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 13054_ZC_17 count 1204
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 13183_ZC_11 count 1205
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 13183_ZEA_11 count 1206
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZC_11 count 1207
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZEA_11 count 1208
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 13054_ZC_18 count 1209
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZC_14 count 1211
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZD_15 count 1212
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 13183_ZC_12 count 1213
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 84332_ZEA_11 count 1214
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 84332_ZD_11 count 1215
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_13 count 1231
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23216_ZC_11 count 1233
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_11 count 1238
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 1115_ZC_12 count 1240
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_12 count 1242
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 1115_ZC_11 count 1243
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23216_ZC_12 count 1254
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 0758_ZC_12 count 1566
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_14 count 1567
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 7604_ZB_02 count 1620
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 1115_ZC_11 count 1657
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_12 count 1658
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_11 count 1659
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_13 count 1660
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_14 count 1661
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23216_ZC_11 count 1662
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23216_ZC_12 count 1663
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 1115_ZC_12 count 1664
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_13 count 1665
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 23215_ZC_11 count 1666
+INFO   2014-12-09 09:31:57[NVDBReader] extractType null for 1115_ZC_12 count 1667
+INFO   2014-12-09 09:32:04[NVDBReader] extractDisconnections found 1115_ZC_12 count 22 no more existing!
+INFO   2014-12-09 09:32:04[NVDBReader] extractDisconnections found 74745_ZEA_11 count 85 no more existing!
+INFO   2014-12-09 09:32:04[NVDBReader] extractDisconnections found null count 147 no more existing!
+INFO   2014-12-09 09:32:04[NVDBReader] extractDisconnections found 7604_ZB_02 count 234 no more existing!
+INFO   2014-12-09 09:32:05[utils.MDBReader] extractNEs: uknetvad map file contains 1708; including 93 disabled NEs
+INFO   2014-12-09 09:32:05[utils.MDBReader] VFE for uknetvad are 1272
+INFO   2014-12-09 09:32:18[utils.MDBReader] extractNEs: uknetvae map file contains 1284; including 129 disabled NEs
+INFO   2014-12-09 09:32:18[utils.MDBReader] VFE for uknetvae are 923
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 36944_ZC_11 count 25
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 0371_ZC_14 count 26
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 36944_ZEA_11 count 27
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 5487_ZD_12 count 519
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 1200_ZEA_11 count 787
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 34707_ZFA_11 count 788
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 34707_ZD_11 count 789
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 1200_ZD_12 count 1142
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 87347_ZD_11 count 1143
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 87347_ZEA_11 count 1144
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 1200_ZD_13 count 1149
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 87765_ZEA_11 count 1150
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 87765_ZD_11 count 1151
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 13007_ZDA_11 count 1163
+INFO   2014-12-09 09:32:24[NVDBReader] extractType null for 13007_ZDA_11_test count 1164
+INFO   2014-12-09 09:32:32[utils.MDBReader] extractNEs: uknetvag map file contains 1717; including 86 disabled NEs
+INFO   2014-12-09 09:32:32[utils.MDBReader] VFE for uknetvag are 1261
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 0277_ZD_15 count 530
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 36454_ZC_11 count 1185
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 3697_ZC_11 count 1195
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_11 count 1626
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_12 count 1627
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 34798_ZEA_11 count 1628
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZEA_11 count 1629
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_11 count 1630
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_13 count 1632
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 34798_ZD_11 count 1633
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 34798_ZEA_11 count 1634
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 0277_ZD_15 count 1635
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 0277_ZD_16 count 1636
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88149_ZEA_11 count 1655
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88149_ZD_11 count 1656
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_14 count 1657
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88184_ZEA_11 count 1658
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 42073_ZD_15 count 1659
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88184_ZD_11 count 1660
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88247_ZEA_11 count 1735
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 88247_ZD_11 count 1736
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 3483_ZD_12 count 1737
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 85501_ZD_11 count 1738
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 3484_ZD_12 count 1739
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 85501_ZEA_11 count 1741
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 5696_ZDA_12 count 1772
+INFO   2014-12-09 09:32:38[NVDBReader] extractType null for 5696_ZEA_12 count 1773
+INFO   2014-12-09 09:32:46[utils.MDBReader] extractNEs: uknetvah map file contains 2096; including 124 disabled NEs
+INFO   2014-12-09 09:32:46[utils.MDBReader] VFE for uknetvah are 1443
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 5330_ZFA_11 count 557
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZA_11 count 629
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZA_12 count 632
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_11 count 633
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6553_ZC_11 count 635
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6553_ZDA_11 count 637
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZDA_11 count 640
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6553_ZC_12 count 641
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_12 count 643
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_13 count 644
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6550_ZDA_11 count 646
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6550_ZC_11 count 647
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_14 count 648
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6551_ZC_11 count 649
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23293_ZFA_11 count 651
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_16 count 652
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23293_ZC_12 count 653
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZEA_11 count 654
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_17 count 655
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23198_ZC_11 count 657
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_18 count 658
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_19 count 660
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 3050_ZFA_11 count 661
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 3050_ZC_11 count 662
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1439_ZDA_11 count 808
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1439_ZC_11 count 809
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23293_ZC_11 count 962
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23294_ZC_15 count 963
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 8247_ZC_11 count 964
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23196_ZFA_11 count 1060
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23332_ZD_15 count 1064
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6532_ZD_11 count 1066
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 22190_ZFA_11 count 1150
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1091_ZEA_11 count 1587
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1091_ZD_11 count 1588
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 4136_ZEA_11 count 1589
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 4136_ZD_11 count 1590
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 5330_ZFA_11 count 1831
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6532_ZD_11 count 1845
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23028_ZC_12* count 1855
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23028_ZC_11* count 1861
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 3355_ZEA_11* count 1862
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 3355_ZC_11* count 1863
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23028_ZEA_11* count 1866
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23028_ZC_12 count 1869
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 5330_ZFA_11 count 1888
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1437_ZD_11 count 1907
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 1437_ZEA_11 count 1908
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 77515_ZEA_11 count 1909
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 77515_ZD_11 count 1910
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 22190_ZFA_11 count 1912
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 3050_ZFA_11 count 2056
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23293_ZFA_11 count 2057
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23198_ZEA_11* count 2062
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 6551_ZEA_11* count 2067
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23196_ZFA_11 count 2091
+INFO   2014-12-09 09:32:52[NVDBReader] extractType null for 23196_ZFA_11 count 2115
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 8247_ZC_11 count 43 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 3050_ZC_11 count 72 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23293_ZC_11 count 92 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZC_13 count 93 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZC_14 count 94 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZC_15 count 95 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 6551_ZEA_11* count 134 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23196_ZFA_11 count 148 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23293_ZFA_11 count 149 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 5330_ZFA_11 count 152 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZA_11 count 162 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZA_12 count 163 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23294_ZDA_11 count 174 no more existing!
+INFO   2014-12-09 09:32:59[NVDBReader] extractDisconnections found 23332_ZD_15 count 221 no more existing!
+INFO   2014-12-09 09:33:00[utils.MDBReader] extractNEs: uknetvai map file contains 1411; including 54 disabled NEs
+INFO   2014-12-09 09:33:00[utils.MDBReader] VFE for uknetvai are 1019
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 32172_ZBS_13 count 167
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 6877_ZBP_14 count 182
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 6877_ZBS_16 count 183
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11027_ZBS_11 count 184
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 1302_ZBP_11 count 185
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 6877_ZBP_17 count 187
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 6877_ZBP_13 count 189
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 31258_ZBP_11 count 190
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 73250_ZBP_11 count 192
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 31259_ZBP_12 count 232
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 6725_ZBP_11 count 233
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0083_ZDA_11 count 441
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0083_ZC_11 count 442
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 3027_ZDA_11 count 443
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 3027_ZC_11 count 444
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11332_ZD_11 count 452
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0083_ZD_12 count 453
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11332_ZEA_11 count 456
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 1165_ZC_15 count 464
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0398_ZDA_11 count 465
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0398_ZC_11 count 466
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0398_ZC_12 count 467
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 3355_ZC_11 count 707
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 3355_ZEA_11 count 709
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 23028_ZEA_11 count 710
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 4924_ZC_123 count 711
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 23028_ZC_11 count 712
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 4924_ZC_124 count 713
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 23028_ZC_13 count 715
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 23028_ZC_12 count 716
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11139_ZDA_12 count 990
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 10610_ZDA_12 count 1000
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 82129_ZBP_11 count 1046
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 1165_ZC_16 count 1199
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 23028_ZEA_11(To-be-removed) count 1298
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 2081_ZD_11 count 1304
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 2081_ZEA_11 count 1307
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 5726_ZDA_11 count 1315
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 5726_ZC_11 count 1334
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 87593_ZC_15 count 1347
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11332_ZEA_11 count 1389
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 3027_ZC_11 count 1390
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 0083_ZD_12 count 1392
+INFO   2014-12-09 09:33:07[NVDBReader] extractType null for 11332_ZD_11 count 1394
+INFO   2014-12-09 09:33:14[NVDBReader] extractDisconnections found null count 39 no more existing!
+INFO   2014-12-09 09:33:14[utils.MDBReader] extractNEs: uknetvaj map file contains 1865; including 115 disabled NEs
+INFO   2014-12-09 09:33:15[utils.MDBReader] VFE for uknetvaj are 1310
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 6099_ZA_12 count 140
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 33405_ZA_11 count 142
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 11265_ZC_13 count 573
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 4902_ZC_11 count 575
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 23024_ZBP_15 count 827
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 0335_ZBP_11 count 828
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 0335_ZBP_13 count 829
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 33303_ZBP_11 count 832
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZC_11 count 899
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 23075_ZC_13 count 900
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 23075_ZC_11 count 902
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 23075_ZDA_11 count 903
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 33725_ZDA_11 count 904
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZDA_11 count 905
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 23075_ZC_12 count 906
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 33725_ZC_11 count 908
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZC_13 count 909
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 2004_ZC_18 count 910
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 33725_ZC_12 count 923
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZC_12 count 1648
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 2004_ZC_19 count 1649
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 0732_ZC_11 count 1681
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZC_12 count 1768
+INFO   2014-12-09 09:33:21[NVDBReader] extractType null for 1800_ZC_11 count 1812
+INFO   2014-12-09 09:33:27[Main] Creating 145 threads
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-1 starts audit for 71618_ZBP_11; 1/121
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-18 starts audit for 5651_ZBP_21; 1/55
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 5651_ZBP_21
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-16 starts audit for 34887_ZD_11; 1/94
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-14 starts audit for 32744_ZC_11; 1/60
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-3 starts audit for 106_ZC_112; 1/154
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-12 starts audit for 1688_ZEA_11; 1/101
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-10 starts audit for 0221_ZC_16; 1/66
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-8 starts audit for 4623_ZEA_11; 1/67
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-5 starts audit for 23310_ZD_11; 1/82
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-6 starts audit for 3140_ZC_11; 1/54
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-4 starts audit for 36906_ZBP_11; 1/26
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 36906_ZBP_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-2 starts audit for 35878_ZEA_11; 1/34
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-34 starts audit for 18890_ZD_11; 1/76
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-75 starts audit for 8183_ZDA_11; 1/84
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-87 starts audit for 12019_ZBS_24; 1/48
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 12019_ZBS_24
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-87 starts audit for 12019_ZDA_11; 2/48
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-110 starts audit for 0124_ZA_11; 1/113
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 0124_ZA_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-110 starts audit for 0124_ZA_12; 2/113
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 0124_ZA_12
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-110 starts audit for 6045_ZD_11; 3/113
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-36 starts audit for 31856_ZC_14; 1/65
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-38 starts audit for 4706_ZC_11; 1/65
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-40 starts audit for 35585_ZBP_11; 1/60
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 35585_ZBP_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-40 starts audit for 36164_ZBP_11; 2/60
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 36164_ZBP_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-40 starts audit for 5767_ZC_11; 3/60
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-42 starts audit for 73230_ZC_11; 1/141
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-44 starts audit for 1581_ZEA_11; 1/141
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-46 starts audit for 35085_ZBP_21; 1/68
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35085_ZBP_21
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-46 starts audit for 0272_ZC_14; 2/68
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-48 starts audit for 78283_ZBP_11; 1/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 78283_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 4211_ZBS_11; 2/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4211_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 56135_ZBP_11; 3/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 56135_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 37154_ZBS_11; 4/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37154_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 11131_ZBP_11; 5/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11131_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 5790_ZBS_13; 6/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5790_ZBS_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 5790_ZBS_14; 7/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5790_ZBS_14
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-31 starts audit for 35898_ZBP_11; 1/70
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35898_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-31 starts audit for 5850_ZBS_11; 2/70
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5850_ZBS_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-50 starts audit for 4735_ZC_12; 1/68
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-52 starts audit for 6834_ZBP_11; 1/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6834_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 6834_ZBP_13; 2/12
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-54 starts audit for 1339_ZC_12; 1/208
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-33 starts audit for 3415_ZDA_11; 1/99
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-56 starts audit for 0987_ZC_14; 1/32
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-58 starts audit for 36075_ZDA_11; 1/42
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-35 starts audit for 3673_ZBS_11; 1/25
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 3673_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-35 starts audit for 7940_ZBP_12; 2/25
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 7940_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-35 starts audit for 0153_ZC_15; 3/25
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-27 starts audit for 37409_ZD_11; 1/78
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-25 starts audit for 1270_ZC_11; 1/143
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-78 starts audit for 13128_ZC_12; 1/102
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-76 starts audit for 4711_ZBS_11; 1/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4711_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 8424_ZBP_11; 2/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8424_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 11152_ZBP_13; 3/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11152_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 11152_ZBP_12; 4/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11152_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 11152_ZBP_11; 5/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11152_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 8495_ZBP_12; 6/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8495_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 8495_ZBP_11; 7/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8495_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 5466_ZBS_13; 8/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5466_ZBS_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 5462_ZBP_11; 9/20
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-74 starts audit for 4920_ZDA_12; 1/157
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-37 starts audit for 0315_ZC_11; 1/85
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-72 starts audit for 6985_ZC_11; 1/109
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-70 starts audit for 0186_ZBS_11; 1/96
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0186_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-70 starts audit for 4990_ZD_13; 2/96
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-68 starts audit for 0551_ZC_11; 1/27
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-26 starts audit for 33407_ZD_11; 1/125
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-60 starts audit for 35062_ZA_22; 1/40
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35062_ZA_22
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-60 starts audit for 35062_ZA_21; 2/40
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-62 starts audit for 37426_ZBS_11; 1/62
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37426_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-62 starts audit for 4387_ZBP_11; 2/62
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-39 starts audit for 31188_ZC_13; 1/101
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-66 starts audit for 88111_ZEA_11; 1/79
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-64 starts audit for 0340_ZC_121; 1/130
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-21 starts audit for 48155_ZFA_11; 1/97
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-24 starts audit for 35868_ZBP_11; 1/81
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35868_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-24 starts audit for 36971_ZDA_11; 2/81
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-23 starts audit for 35235_ZFA_11; 1/114
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-22 starts audit for 0191_ZA_15; 1/14
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0191_ZA_15
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-22 starts audit for 0191_ZA_14; 2/14
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0191_ZA_14
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-18 starts audit for 8189_ZBP_21; 2/55
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8189_ZBP_21
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-20 starts audit for 36174_ZBS_11; 1/75
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 36174_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-20 starts audit for 0057_ZDA_11; 2/75
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-7 starts audit for 37507_ZBP_11; 1/101
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37507_ZBP_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-9 starts audit for 1722_ZA_21; 1/25
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-11 starts audit for 35718_ZC_12; 1/20
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-13 starts audit for 0733_ZEA_11; 1/125
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-15 starts audit for 1773_ZFA_11; 1/54
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-17 starts audit for 6536_ZFA_11; 1/146
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-19 starts audit for 3779_ZA_12; 1/79
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 3779_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-19 starts audit for 0895_ZDA_11; 2/79
+INFO   2014-12-09 09:33:27[NeConnector] Audit skipped for 71618_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-1 starts audit for 10150_ZDA_12; 2/121
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 10150_ZDA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-1 starts audit for 81708_ZBP_11; 3/121
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1722_ZA_21
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-9 starts audit for 1722_ZA_22; 2/25
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-7 starts audit for 1296_ZC_11; 2/101
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-18 starts audit for 0723_ZBP_22; 3/55
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0723_ZBP_22
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-22 starts audit for 5640_ZBP_11; 3/14
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5640_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-22 starts audit for 72658_ZA_11; 4/14
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 35878_ZEA_11; Error is :java.lang.NullPointerException
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 1581_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 4920_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-74 starts audit for 4920_ZDA_11; 2/157
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 88111_ZEA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-66 starts audit for 35077__ZD_11; 2/79
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4387_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-62 starts audit for 5719_ZBP_11; 3/62
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5719_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-62 starts audit for 5719_ZBP_12; 4/62
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5719_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 36075_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35062_ZA_21
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-60 starts audit for 1195_ZC_12; 3/40
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5462_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 5462_ZBP_12; 10/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5462_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-76 starts audit for 11152_ZBS_14; 11/20
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 8183_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-75 starts audit for 1691_ZD_11; 2/84
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6834_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 37802_ZBP_11; 3/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37802_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 11551_ZBP_11; 4/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11551_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 6872_ZBP_11; 5/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6872_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 6855_ZBS_11; 6/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6855_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 8508_ZBP_11; 7/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8508_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 8508_ZBS_13; 8/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8508_ZBS_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 0209_ZBP_13; 9/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0209_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 0209_ZBP_15; 10/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0209_ZBP_15
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 0209_ZBP_14; 11/12
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0209_ZBP_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-31 starts audit for 3880_ZC_12; 3/70
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 4337_ZBS_14; 8/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4337_ZBS_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-48 starts audit for 0894_ZA_11; 9/47
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-112 starts audit for 1618_ZC_13; 1/125
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-114 starts audit for 22075_ZD_11; 1/37
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-118 starts audit for 0644_ZA_12; 1/55
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0644_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-118 starts audit for 0644_ZA_11; 2/55
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0644_ZA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-118 starts audit for 11086_ZDA_11; 3/55
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-116 starts audit for 0141_ZC_18; 1/58
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-120 starts audit for 1136_ZEA_11; 1/135
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-122 starts audit for 19709_ZFA_11; 1/60
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-124 starts audit for 1071_ZBP_14; 1/39
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1071_ZBP_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-124 starts audit for 1071_ZBP_16; 2/39
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1071_ZBP_16
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-124 starts audit for 1071_ZBP_13; 3/39
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-126 starts audit for 1653_ZA_41; 1/2
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-128 starts audit for 1908_ZEA_11; 1/92
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-130 starts audit for 72858_ZDA_11; 1/89
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-132 starts audit for 47129_ZD_11; 1/4
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-134 starts audit for 0704_ZBP_15; 1/37
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0704_ZBP_15
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-134 starts audit for 0704_ZBP_11; 2/37
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0704_ZBP_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-136 starts audit for 10142_ZDA_11; 1/118
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-138 starts audit for 8525_ZA_11; 1/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8525_ZA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 8525_ZA_12; 2/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8525_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 0264_ZBP_11; 3/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0264_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 37941_ZBP_12; 4/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37941_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 6591_ZBS_11; 5/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6591_ZBS_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 4432_ZBP_12; 6/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4432_ZBP_12
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-140 starts audit for 34965_ZBP_11; 1/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 34965_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 30149_ZBP_14; 2/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 30149_ZBP_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 30149_ZBP_13; 3/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 30149_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 7902_ZBP_11; 4/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 7902_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 3229_ZA_12; 5/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 3229_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 3229_ZA_11; 6/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 3229_ZA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-140 starts audit for 3284_ZDA_11; 7/49
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-142 starts audit for 0088_ZBP_17; 1/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0088_ZBP_17
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-142 starts audit for 0088_ZBP_13; 2/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0088_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-142 starts audit for 0088_ZBP_16; 3/49
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0088_ZBP_16
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-142 starts audit for 1803_ZC_11; 4/49
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-144 starts audit for 32122_ZFA_11; 1/88
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-145 starts audit for 4207_ZC_11; 1/195
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-143 starts audit for 6028_ZDA_11; 1/141
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 6028_ZDA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-143 starts audit for 1494_ZA_22; 2/141
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-141 starts audit for 36116_ZFA_11; 1/58
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-139 starts audit for 33447_ZC_13; 1/53
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-137 starts audit for 0234_ZA_21; 1/206
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0234_ZA_21
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-137 starts audit for 0234_ZA_22; 2/206
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0234_ZA_22
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-137 starts audit for 73026_ZD_11; 3/206
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-135 starts audit for 23130_ZC_12; 1/42
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-133 starts audit for 0541_ZDA_12; 1/87
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-131 starts audit for 4143_ZBP_11; 1/26
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4143_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-131 starts audit for 0182_ZA_12; 2/26
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0182_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-131 starts audit for 0182_ZA_11; 3/26
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-129 starts audit for 1048_ZDA_11; 1/116
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-127 starts audit for 0853_ZC_12; 1/24
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-125 starts audit for 5429_ZA_11; 1/113
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5429_ZA_11
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-123 starts audit for 33294_ZC_11; 1/119
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-121 starts audit for 0229_ZBP_12; 1/22
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-119 starts audit for 37034_ZC_11; 1/169
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-117 starts audit for 37739_ZFA_11; 1/140
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-115 starts audit for 4480_ZBS_12; 1/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4480_ZBS_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 11870_ZBP_11; 2/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11870_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 0226_ZBP_13; 3/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0226_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 0226_ZBP_14; 4/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0226_ZBP_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 0226_ZBP_17; 5/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0226_ZBP_17
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 0226_ZBP_16; 6/74
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0226_ZBP_16
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-115 starts audit for 36689_ZD_11; 7/74
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-113 starts audit for 1617_ZEA_11; 1/50
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-111 starts audit for 32186_ZC_11; 1/201
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-107 starts audit for 35596_ZBP_11; 1/22
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35596_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-107 starts audit for 1768_ZA_12; 2/22
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1768_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-107 starts audit for 1756_ZBS_12; 3/22
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1756_ZBS_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-107 starts audit for 0448_ZBP_11; 4/22
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0448_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-107 starts audit for 4212_ZBP_11; 5/22
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 4212_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-107 starts audit for 1768_ZD_12; 6/22
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-109 starts audit for 84971_ZEA_11; 1/140
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-96 starts audit for 8894_ZEA_11; 1/29
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-98 starts audit for 0883_ZD_12; 1/195
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-100 starts audit for 6013_ZC_11; 1/72
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-102 starts audit for 3189_ZEA_11; 1/94
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-104 starts audit for 8906_ZDA_11; 1/61
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-106 starts audit for 0052_ZA_23; 1/2
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0052_ZA_23
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-106 starts audit for XER_ZA_21; 2/2
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for XER_ZA_21
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-108 starts audit for 0060_ZDA_11; 1/239
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-88 starts audit for 0774_ZEA_11; 1/122
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-90 starts audit for 30830_ZDA_12; 1/185
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-92 starts audit for 0058_ZBP_11; 1/84
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0058_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-92 starts audit for 30523_ZC_11; 2/84
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-94 starts audit for 37676_ZBS_21; 1/57
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37676_ZBS_21
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-103 starts audit for 3703_ZC_11; 1/8
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-105 starts audit for 1098_ZA_11; 1/21
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1098_ZA_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-105 starts audit for 1098_ZA_12; 2/21
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1098_ZA_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-105 starts audit for 6193_ZFA_11; 3/21
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-101 starts audit for 1165_ZC_11; 1/118
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-99 starts audit for 37656_ZBP_11; 1/18
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37656_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-99 starts audit for 37656_ZBP_14; 2/18
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37656_ZBP_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-99 starts audit for 37656_ZBP_12; 3/18
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 37656_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-99 starts audit for 10891_ZC_11; 4/18
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-97 starts audit for 33617_ZBP_21; 1/34
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 33617_ZBP_21
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-97 starts audit for 0170_ZA_22; 2/34
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-95 starts audit for 0390_ZC_11; 1/139
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-86 starts audit for 0197_ZDA_11; 1/63
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-93 starts audit for 1680_ZC_11; 1/98
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-91 starts audit for 12206_ZFA_11; 1/119
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-89 starts audit for 1624_ZD_14; 1/152
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-81 starts audit for 5302_ZBP_12; 1/73
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5302_ZBP_12
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-81 starts audit for 5913_ZD_12; 2/73
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-83 starts audit for 0084_ZEA_11; 1/22
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-80 starts audit for 3456_ZDA_11; 1/90
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-82 starts audit for 11499_ZC_11; 1/55
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-84 starts audit for 3790_ZA_21; 1/28
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-85 starts audit for 5602_ZC_11; 1/128
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-63 starts audit for 3140_ZC_13; 1/38
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-65 starts audit for 3102_ZDA_11; 1/180
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-61 starts audit for 0770_ZA_31; 1/38
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0770_ZA_31
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-61 starts audit for 0770_ZA_32; 2/38
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0770_ZA_32
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-61 starts audit for 5643_ZBP_32; 3/38
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5643_ZBP_32
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-59 starts audit for 6550_ZEA_11; 1/162
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-57 starts audit for 37462_ZEA_11; 1/49
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-55 starts audit for 35990_ZD_13; 1/44
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-53 starts audit for 3815_ZD_11; 1/117
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-51 starts audit for 1949_ZEA_11; 1/120
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-49 starts audit for 3231_ZDA_11; 1/113
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-47 starts audit for 4049_ZD_11; 1/142
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-71 starts audit for 3541_ZFA_11; 1/52
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-45 starts audit for 0073_ZD_110; 1/136
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-73 starts audit for 8272_ZBP_13; 1/74
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-43 starts audit for 0759_ZC_17; 1/34
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-69 starts audit for 36381_ZA_11; 1/181
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-41 starts audit for 33283_ZFA_11; 1/156
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-67 starts audit for 8215_ZD_11; 1/210
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-77 starts audit for 1823_ZEA_11; 1/132
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-4 starts audit for 5658_ZBS_14; 2/26
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5658_ZBS_14
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-4 starts audit for 5658_ZBP_11; 3/26
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-29 starts audit for 1774_ZEA_11; 1/31
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-79 starts audit for 0520_ZBP_27; 1/110
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0520_ZBP_27
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-79 starts audit for 0520_ZBP_29; 2/110
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0520_ZBP_29
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-79 starts audit for 0520_ZBP_26; 3/110
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0520_ZBP_26
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-79 starts audit for 85503_ZD_11; 4/110
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 85503_ZD_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-79 starts audit for 4420_ZDA_11; 5/110
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-28 starts audit for 0629_ZDA_11; 1/82
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-30 starts audit for 13109_ZFA_11; 1/57
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 13109_ZFA_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-30 starts audit for 13179_ZC_12; 2/57
+INFO   2014-12-09 09:33:27[NeConnector] pool-2-thread-32 starts audit for 13153_ZEA_11; 1/88
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 3189_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3189_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-102 starts audit for 0349_ZA_22; 2/94
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0349_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-102 starts audit for 0349_ZA_21; 3/94
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0349_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-102 starts audit for 3147_ZD_11; 4/94
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 72858_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-130 starts audit for 21004_ZBP_21; 2/89
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 21004_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-130 starts audit for 37862_ZA_21; 3/89
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 37862_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-130 starts audit for 8518_ZC_11; 4/89
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 0629_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-28 starts audit for 11181_ZA_21; 2/82
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 11181_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-28 starts audit for 11181_ZA_22; 3/82
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 11181_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-28 starts audit for 6802_ZA_22; 4/82
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 6802_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-28 starts audit for 6802_ZA_21; 5/82
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 6802_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-28 starts audit for 0413_ZC_13; 6/82
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 0197_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-86 starts audit for 0197_ZDA_12; 2/63
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3284_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 33283_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-41 starts audit for 10156_ZD_11; 2/156
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 12206_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-91 starts audit for 83208_ZEA_11; 2/119
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 84971_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 84971_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-109 starts audit for 0017_ZBP_12; 2/140
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0017_ZBP_12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-109 starts audit for 23119_ZC_11; 3/140
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 5658_ZBP_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-4 starts audit for 6174_ZBP_12; 4/26
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 6174_ZBP_12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-4 starts audit for 6174_ZBP_11; 5/26
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 6174_ZBP_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-4 starts audit for 82608_ZD_11; 6/26
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 3102_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-65 starts audit for 0417_ZEA_11; 2/180
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 36381_ZA_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-69 starts audit for 36381_ZA_12; 2/181
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 36381_ZA_12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-69 starts audit for 0250_ZA_41; 3/181
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0250_ZA_41
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-69 starts audit for 0250_ZA_42; 4/181
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0250_ZA_42
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-69 starts audit for 36063_ZD_11; 5/181
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 8272_ZBP_13
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-73 starts audit for 5725_ZC_11; 2/74
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 0197_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-86 starts audit for 7686_ZFA_11; 3/63
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 0774_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 0774_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-88 starts audit for 3643_ZDA_11; 2/122
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-61 starts audit for 5643_ZBP_31; 4/38
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 5643_ZBP_31
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-61 starts audit for 0408_ZBP_31; 5/38
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0408_ZBP_31
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-61 starts audit for 32904_ZBP_31; 6/38
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 32904_ZBP_31
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-61 starts audit for 32739_ZBP_31; 7/38
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 32739_ZBP_31
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-61 starts audit for 1764_ZBP_31; 8/38
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 1764_ZBP_31
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 1617_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 1617_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-113 starts audit for 23013_ZDA_11; 2/50
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 8906_ZDA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 8906_ZDA_11; svr: 5.0.20.7
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-104 starts audit for 8906_ZC_11; 2/61
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 3790_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-84 starts audit for 5846_ZD_11; 2/28
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 8894_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 8894_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-96 starts audit for 5837_ZD_14; 2/29
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0170_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0170_ZA_21; 3/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0170_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 34920_ZA_23; 4/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 34920_ZA_23
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0732_ZBS_26; 5/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0732_ZBS_26
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8161_ZBP_22; 6/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8161_ZBP_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8161_ZBP_21; 7/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8161_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0732_ZBP_23; 8/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0732_ZBP_23
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0732_ZBP_27; 9/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0732_ZBP_27
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8164_ZBP_23; 10/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8164_ZBP_23
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8164_ZBP_24; 11/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8164_ZBP_24
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8241_ZBP_21; 12/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8241_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0088_ZA_21; 13/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0088_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0088_ZA_22; 14/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0088_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 32375_ZBP_21; 15/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 32375_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0732_ZA_21; 16/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0732_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0732_ZA_22; 17/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0732_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 3207_ZBP_21; 18/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 3207_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8478_ZA_21; 19/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8478_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 1703_ZBP_21; 20/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 1703_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8164_ZA_22; 21/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8164_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 30738_ZBS_21; 22/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 30738_ZBS_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8164_ZA_21; 23/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8164_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8273_ZA_21; 24/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8273_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 8273_ZA_22; 25/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 8273_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZA_21; 26/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZA_22; 27/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZBP_28; 28/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZBP_28
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZBP_29; 29/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZBP_29
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZBP_26; 30/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZBP_26
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZBP_24; 31/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZBP_24
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 0169_ZBP_23; 32/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0169_ZBP_23
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 4119_ZBP_21; 33/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 4119_ZBP_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-97 starts audit for 31953_ZBP_21; 34/34
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 31953_ZBP_21
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 0060_ZDA_11; svr: 5.0.10.12
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 4623_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 4623_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-8 starts audit for 23151_ZC_11; 2/67
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 23151_ZC_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-8 starts audit for 4626_ZEA_11; 3/67
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 30830_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-90 starts audit for 1208_ZC_11; 2/185
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 37739_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-117 starts audit for 12235_ZC_11; 2/140
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 0541_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-133 starts audit for 0541_ZDA_11; 2/87
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 1136_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 1136_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-120 starts audit for 6514_ZD_12; 2/135
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-94 starts audit for 3602_ZDA_11; 2/57
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 36116_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-141 starts audit for 4323_ZD_11; 2/58
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 0895_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-19 starts audit for 3809_ZC_11; 3/79
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 32122_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-144 starts audit for 0667_ZDA_11; 2/88
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 1048_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-129 starts audit for 11193_ZEA_11; 2/116
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 0733_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 0733_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-13 starts audit for 37854_ZC_11; 2/125
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0229_ZBP_12
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0229_ZBP_11; 2/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0229_ZBP_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_16; 3/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_16
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_17; 4/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_17
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_18; 5/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_18
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_13; 6/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_13
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_14; 7/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_14
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZBP_15; 8/22
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 0384_ZBP_15
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-121 starts audit for 0384_ZC_11; 9/22
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-125 starts audit for 0203_ZEA_11; 2/113
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0182_ZA_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-131 starts audit for 35260_ZC_11; 4/26
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 19709_ZFA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 19709_ZFA_11; svr: noSuchObject
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-122 starts audit for 5804_ZBS_11; 2/60
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 5804_ZBS_11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-122 starts audit for 8540_ZEA_11; 3/60
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 1908_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 1908_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-128 starts audit for 1455_ZD_12; 2/92
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 35235_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-23 starts audit for 52134_ZFA_11; 2/114
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1494_ZA_22
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-143 starts audit for 1494_ZA_21; 3/141
+INFO   2014-12-09 09:33:30[NeConnector] Audit skipped for 1494_ZA_21
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-143 starts audit for 1495_ZC_11; 4/141
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 10142_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-136 starts audit for 10142_ZDA_12; 2/118
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 11086_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 31486_ZBP_19; 4/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31486_ZBP_19
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 31486_ZBP_13; 5/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31486_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 31486_ZBP_15; 6/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31486_ZBP_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 31486_ZBP_16; 7/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31486_ZBP_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 5524_ZBP_11; 8/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5524_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-138 starts audit for 8547_ZBP_11; 7/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8547_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 4432_ZBP_11; 8/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4432_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 0583_ZBP_15; 9/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0583_ZBP_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 0583_ZBP_13; 10/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0583_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 37496_ZBP_13; 11/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 37496_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 37496_ZBP_12; 12/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 37496_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 0263_ZDA_13; 13/58
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-134 starts audit for 0137_ZDA_11; 3/37
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 1773_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-15 starts audit for 13090_ZEA_11; 2/54
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1653_ZA_41
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-126 starts audit for 1115_ZA_41; 2/2
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1115_ZA_41
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1071_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 32804_ZDA_11; 4/39
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 0057_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-20 starts audit for 0690_ZC_14; 3/75
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 22075_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-114 starts audit for 35197_ZDA_11; 2/37
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 0894_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0894_ZA_12; 10/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0894_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 4755_ZBP_11; 11/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4755_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0894_ZBP_13; 12/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0894_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 4328_ZBP_11; 13/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4328_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 4328_ZBP_12; 14/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4328_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0861_ZBP_15; 15/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0861_ZBP_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0861_ZBP_14; 16/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0861_ZBP_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0861_ZBP_13; 17/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0861_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 4337_ZBP_23; 18/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4337_ZBP_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0861_ZA_12; 19/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0861_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0861_ZA_11; 20/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0861_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 4337_ZBP_15; 21/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4337_ZBP_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 1729_ZA_11; 22/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1729_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 1729_ZA_12; 23/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1729_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 6037_ZBP_11; 24/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6037_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 1728_ZBP_11; 25/47
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1728_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-48 starts audit for 0023_ZC_11; 26/47
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 48155_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-21 starts audit for 10210_ZFA_11; 2/97
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-52 starts audit for 0209_ZBP_11; 12/12
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0209_ZBP_11
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 4920_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-74 starts audit for 3170_ZFA_11; 3/157
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 11152_ZBS_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 1260_ZBP_14; 12/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1260_ZBP_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 1260_ZBP_13; 13/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1260_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 5466_ZBP_12; 14/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5466_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 5466_ZBP_11; 15/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5466_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 5467_ZBS_12; 16/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5467_ZBS_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 11151_ZBS_11; 17/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11151_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 1557_ZBS_11; 18/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1557_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 38148_ZBP_11; 19/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 38148_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-76 starts audit for 5467_ZBP_11; 20/20
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5467_ZBP_11
+ERROR  2014-12-09 09:33:28[NeConnector] collectFromNE fails for 1688_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1688_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-12 starts audit for 45315_ZC_13; 2/101
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 6536_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-17 starts audit for 31363_ZD_13; 2/146
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-58 starts audit for 3717_ZFA_11; 2/42
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-62 starts audit for 52234_ZC_11; 5/62
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 35077__ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 4264_ZD_13; 3/79
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4264_ZD_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 11496_ZBP_21; 4/79
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11496_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 31873_ZEA_11; 5/79
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31873_ZEA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 86088_ZD_11; 6/79
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 86088_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 11735_ZBP_21; 7/79
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11735_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 0024_ZEA_11; 8/79
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 1581_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-44 starts audit for 1586_ZFA_11; 2/141
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 35878_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-2 starts audit for 35878_ZD_12; 2/34
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 72658_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 72658_ZA_12; 5/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 72658_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 0702_ZBS_14; 6/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0702_ZBS_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 0191_ZBS_16; 7/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0191_ZBS_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 0702_ZA_11; 8/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0702_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 0702_ZA_12; 9/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0702_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 1137_ZA_12; 10/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1137_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 1137_ZA_11; 11/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1137_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 5580_ZBS_11; 12/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5580_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 35699_ZBS_11; 13/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 35699_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-22 starts audit for 0702_ZBP_13; 14/14
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0702_ZBP_13
+INFO   2014-12-09 09:33:28[NeConnector] pool-2-thread-18 starts audit for 0723_ZBP_23; 4/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0723_ZBP_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0723_ZBP_21; 5/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0723_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0723_ZBP_24; 6/55
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 1722_ZA_22
+INFO   2014-12-09 09:33:28[NeConnector] Audit completed for 3415_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for XLS_ZA_21; 3/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for XLS_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for XLS_ZA_22; 4/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for XLS_ZA_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for 23143_ZBP_21; 5/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23143_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for 23144_ZBP_26; 6/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23144_ZBP_26
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for 23144_ZA_21; 7/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23144_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for 23144_ZA_22; 8/25
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23144_ZA_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-9 starts audit for 1965_ZC_11; 9/25
+INFO   2014-12-09 09:33:28[NeConnector] Audit skipped for 81708_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 77487_ZBP_11; 4/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 77487_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1750_ZBP_21; 5/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1750_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1780_ZBP_11; 6/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1780_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 31031_ZC_12; 7/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31031_ZC_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 5729_ZDA_11; 8/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5729_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 8189_ZBP_22; 9/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8189_ZBP_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 33781_ZEA_11; 10/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 33781_ZEA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0183_ZBS_21; 11/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0183_ZBS_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11067_ZA_11; 12/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11067_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for XSY_ZBP_19; 13/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for XSY_ZBP_19
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 36780_ZC_11; 14/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 36780_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 10083_ZDA_11; 15/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 32804_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 0855_ZA_11; 5/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0855_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 0855_ZA_12; 6/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0855_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 5557_ZBP_11; 7/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5557_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 0522_ZA_11; 8/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0522_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 0522_ZA_12; 9/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0522_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 8835_ZA_12; 10/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8835_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 8835_ZA_11; 11/39
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8835_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-124 starts audit for 1901_ZC_12; 12/39
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-33 starts audit for 35118_ZC_11; 2/99
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0723_ZBP_24
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 8193_ZBP_21; 7/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8193_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 3311_ZDA_11; 8/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 3717_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-58 starts audit for 7909_ZDA_11; 3/42
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 13090_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 13090_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-15 starts audit for 8840_ZFA_11; 3/54
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 35197_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-114 starts audit for 8885_ZBP_12; 3/37
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8885_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-114 starts audit for 8885_ZBP_11; 4/37
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8885_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-114 starts audit for 0620_ZDA_11; 5/37
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 3602_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-94 starts audit for 7604_ZDA_11; 3/57
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 3170_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-74 starts audit for 1787_ZDA_11; 4/157
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 0203_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0203_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-125 starts audit for 0203_ZEA_12; 3/113
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 8540_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 8540_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 5826_ZDA_11; 4/60
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 11086_ZBP_16; 9/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11086_ZBP_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 5386_ZBP_11; 10/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5386_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 32528_ZBS_11; 11/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 32528_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-118 starts audit for 31486_ZDA_11; 12/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 10142_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-136 starts audit for 11199_ZC_11; 3/118
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 52134_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-23 starts audit for 1086_ZFA_11; 3/114
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 11193_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 11193_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0541_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-133 starts audit for 23139_ZDA_11; 3/87
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23139_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-133 starts audit for 3474_ZBP_21; 4/87
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3474_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-133 starts audit for 34080_ZA_21; 5/87
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34080_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-133 starts audit for 1327_ZC_11; 6/87
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0667_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-144 starts audit for 0667_ZDA_12; 3/88
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-108 starts audit for 5353_ZDA_11; 2/239
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1787_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-74 starts audit for 3110_ZFA_11; 5/157
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3643_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-88 starts audit for 0544_ZC_16; 3/122
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 1949_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1949_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-51 starts audit for 12231_ZEA_11; 2/120
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 7686_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-86 starts audit for 7689_ZFA_11; 4/63
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 23013_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-113 starts audit for 0394_ZC_18; 3/50
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-61 starts audit for 1764_ZBP_32; 9/38
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1764_ZBP_32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-61 starts audit for 5676_ZBP_31; 10/38
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5676_ZBP_31
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-61 starts audit for 5676_ZBP_32; 11/38
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5676_ZBP_32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-61 starts audit for 59829_ZD_11; 12/38
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 83208_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 83208_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-91 starts audit for 7530_ZFA_11; 3/119
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 0417_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0417_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-65 starts audit for 1786_ZA_11; 3/180
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1786_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-65 starts audit for 1786_ZA_12; 4/180
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1786_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-65 starts audit for 76403_ZC_11; 5/180
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 36971_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 0196_ZA_11; 3/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0196_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 0196_ZA_12; 4/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0196_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 51875_ZBP_11; 5/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 51875_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 3513_ZC_11; 6/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3513_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 1321_ZBP_12; 7/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1321_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 1321_ZBP_11; 8/81
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1321_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-24 starts audit for 3788_ZDA_11; 9/81
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 37462_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 37462_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-57 starts audit for 4560_ZEA_11; 2/49
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 4420_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-79 starts audit for 1689_ZA_21; 6/110
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1689_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-79 starts audit for 1689_ZA_22; 7/110
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1689_ZA_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-79 starts audit for 72503_ZC_11; 8/110
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 13153_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 13153_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-32 starts audit for 6969_ZC_11; 2/88
+INFO   2014-12-09 09:33:30[NeConnector] pool-2-thread-140 starts audit for 11731_ZBP_11; 8/49
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11731_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-140 starts audit for 80525_ZEA_11; 9/49
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3456_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 1593_ZBP_32; 2/90
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1593_ZBP_32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 1593_ZBP_31; 3/90
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1593_ZBP_31
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 0266_ZBS_32; 4/90
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0266_ZBS_32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 31932_ZBP_32; 5/90
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31932_ZBP_32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 7893_ZDA_11; 6/90
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 1823_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1823_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-77 starts audit for 4475_ZD_13; 2/132
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3541_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-71 starts audit for 1562_ZC_11; 2/52
+ERROR  2014-12-09 09:33:30[NeConnector] collectFromNE fails for 6550_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 6550_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-59 starts audit for 23304_ZC_13; 2/162
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 6193_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 0688_ZA_11; 4/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0688_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 0688_ZA_12; 5/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0688_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 8052_ZA_12; 6/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8052_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 8052_ZA_11; 7/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8052_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 32526_ZBP_11; 8/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 32526_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 1098_ZDA_11; 9/21
+INFO   2014-12-09 09:33:30[NeConnector] Audit completed for 3231_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-49 starts audit for 7844_ZC_11; 2/113
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1086_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-23 starts audit for 0108_ZA_12; 4/114
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0108_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-23 starts audit for 0108_ZA_11; 5/114
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0108_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-23 starts audit for 34830_ZEA_11; 6/114
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0667_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-144 starts audit for 31307_ZEA_11; 4/88
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 34887_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-16 starts audit for 34887_ZD_12; 2/94
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1618_ZC_13; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 7604_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 3311_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 8840_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-15 starts audit for 8839_ZC_11; 4/54
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 5826_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 73053_ZA_12; 5/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 73053_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 73053_ZA_11; 6/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 73053_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 31192_ZBP_11; 7/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31192_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 37689_ZEA_11; 8/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0137_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-134 starts audit for 5387_ZC_11; 4/37
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-129 starts audit for 6102_ZC_12; 3/116
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0620_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-114 starts audit for 22254_ZD_11; 6/37
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 7909_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-58 starts audit for 37352_ZFA_11; 4/42
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 4626_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 4626_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-8 starts audit for 3672_ZC_11; 4/67
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0263_ZDA_13; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 0263_ZDA_14; 14/58
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 10210_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-21 starts audit for 0220_ZBS_16; 3/97
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0220_ZBS_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-21 starts audit for 6921_ZFA_11; 4/97
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 10083_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0244_ZC_15; 16/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0244_ZC_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0244_ZC_16; 17/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0244_ZC_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 37254_ZDA_12; 18/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 37254_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34789_ZC_12; 19/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34789_ZC_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34789_ZC_11; 20/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34789_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 38028_ZC_11; 21/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 38028_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 3109_ZDA_12; 22/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3109_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6096_ZDA_12; 23/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6096_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 33991_ZD_11; 24/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 33991_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6186_ZC_11; 25/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6186_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6091_ZA_12; 26/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6091_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6091_ZA_11; 27/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6091_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 36780_ZDA_11; 28/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 36780_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 36780_ZDA_12; 29/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 36780_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 76274_ZC_11; 30/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 76274_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0633_ZDA_12; 31/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0633_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 85581_ZD_11; 32/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 85581_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6186_ZDA_11; 33/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6186_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 47219_ZBP_11; 34/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 47219_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 10083_ZC_11; 35/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 10083_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1750_ZBS_22; 36/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1750_ZBS_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 7914_ZDA_12; 37/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 7914_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0710_ZDA_12; 38/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0710_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6898_ZDA_12; 39/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6898_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 85132_ZD_11; 40/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 85132_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZDA_11; 41/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZDA_13; 42/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZDA_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZDA_12; 43/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1586_ZFA_11; svr: 2.1.11
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 0024_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0024_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11169_ZDA_12; 44/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11169_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 23020_ZDA_12; 45/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 37352_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-58 starts audit for 7909_ZBS_17; 5/42
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 7909_ZBS_17
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-58 starts audit for 7909_ZC_11; 6/42
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 7893_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-80 starts audit for 0266_ZD_15; 7/90
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1098_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 3771_ZA_11; 10/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3771_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 3771_ZA_12; 11/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3771_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-105 starts audit for 87996_ZD_11; 12/21
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 23310_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-5 starts audit for 1801_ZD_14; 2/82
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 31307_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 31307_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-144 starts audit for 22378_ZC_11; 5/88
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 6985_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-72 starts audit for 0068_ZD_17; 2/109
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 12231_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 12231_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-51 starts audit for 0139_ZEA_11; 3/120
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 4990_ZD_13; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-70 starts audit for 19992_ZEA_11; 3/96
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0046_ZA_22; 9/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0046_ZA_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0046_ZA_21; 10/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0046_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 30285_ZBP_21; 11/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 30285_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 30285_ZBP_22; 12/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 30285_ZBP_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 30285_ZBP_23; 13/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 30285_ZBP_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0046_ZBP_23; 14/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0046_ZBP_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0046_ZBP_24; 15/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0046_ZBP_24
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 0046_ZBP_25; 16/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0046_ZBP_25
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 11613_ZBP_21; 17/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11613_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 11613_ZBP_23; 18/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11613_ZBP_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 5471_ZBP_22; 19/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5471_ZBP_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 30291_ZBP_21; 20/55
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 30291_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-18 starts audit for 3320_ZDA_11; 21/55
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-94 starts audit for 3438_ZC_11; 4/57
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 7530_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-91 starts audit for 35807_ZC_11; 4/119
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 5353_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-108 starts audit for 8085_ZA_21; 3/239
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8085_ZA_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-108 starts audit for 8085_ZA_22; 4/239
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 8085_ZA_22
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-108 starts audit for 22217_ZC_11; 5/239
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-112 starts audit for 1618_ZC_12; 2/125
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 37409_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-27 starts audit for 22048_ZC_11; 2/78
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 0203_ZEA_12; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0203_ZEA_12; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-125 starts audit for 37776_ZD_11; 4/113
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 7689_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-86 starts audit for 0472_ZEA_11; 5/63
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 3110_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-74 starts audit for 5361_ZC_14; 6/157
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 33407_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-26 starts audit for 8855_ZC_11; 2/125
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 37689_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 37689_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 31497_ZBP_11; 9/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31497_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 31497_ZBP_12; 10/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31497_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 1400_ZBS_11; 11/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1400_ZBS_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-122 starts audit for 19709_ZD_11; 12/60
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 18890_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-34 starts audit for 0063_ZD_11; 2/76
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0340_ZC_121; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-64 starts audit for 0340_ZC_120; 2/130
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23020_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6101_ZBP_12; 46/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6101_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 3192_ZC_11; 47/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3192_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZC_19; 48/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZC_19
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZC_14; 49/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZC_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0253_ZC_13; 50/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0253_ZC_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 84167_ZBP_21; 51/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 84167_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 4910_ZD_20; 52/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4910_ZD_20
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 10081_ZA_11; 53/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 10081_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 10081_ZA_12; 54/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 10081_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11266_ZC_12; 55/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11266_ZC_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11266_ZC_11; 56/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11266_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11266_ZC_16; 57/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11266_ZC_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11266_ZC_15; 58/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11266_ZC_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11164_ZA_12; 59/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11164_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11164_ZA_13; 60/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11164_ZA_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 6094_ZDA_12; 61/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 6094_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 40533_ZBP_21; 62/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 40533_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0415_ZDA_12; 63/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0415_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1378_ZDA_12; 64/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1378_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 4924_ZA_11; 65/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4924_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 4924_ZA_12; 66/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4924_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0044_ZBP_210; 67/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0044_ZBP_210
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 5729_ZC_11; 68/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 5729_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1606_ZA_23; 69/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1606_ZA_23
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1823_ZC_11; 70/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1823_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 3192_ZEA_11*; 71/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3192_ZEA_11*
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 77306_ZD_11; 72/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 77306_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1823_ZDA_12; 73/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1823_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0415_ZC_19; 74/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0415_ZC_19
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1823_ZDA_11; 75/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1823_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_19; 76/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_19
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_18; 77/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_18
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0434_ZA_12; 78/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0434_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_15; 79/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_15
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0434_ZA_11; 80/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0434_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_14; 81/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_17; 82/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_17
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_16; 83/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_16
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_11; 84/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZC_12; 85/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZC_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for XSY_ZA_14; 86/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for XSY_ZA_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0045_ZBP_11; 87/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0045_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 77306_ZFA_11; 88/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 77306_ZFA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 4169_ZBP_11; 89/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4169_ZBP_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34645_ZBP_13; 90/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34645_ZBP_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34645_ZBP_12; 91/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34645_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 11266_ZDA_11; 92/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 11266_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1792_ZC_11; 93/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1792_ZC_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1578_ZBP_21; 94/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1578_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 31756_ZDA_12; 95/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31756_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 4910_ZC_14; 96/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 4910_ZC_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 35689_ZFA_11; 97/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 35689_ZFA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0405_ZA_11; 98/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0405_ZA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0405_ZA_12; 99/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0405_ZA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0973_ZDA_12; 100/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0973_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 31724_ZDA_12; 101/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 31724_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 76274_ZDA_11; 102/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 76274_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 3109_ZC_13; 103/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 3109_ZC_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 37058_ZC_14; 104/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 37058_ZC_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 37058_ZC_13; 105/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 37058_ZC_13
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1792_ZDA_11; 106/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1792_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1528_ZBP_21; 107/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1528_ZBP_21
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 33781_ZC; 108/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 33781_ZC
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0419_ZC_115; 109/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0419_ZC_115
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 0419_ZC_116; 110/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 0419_ZC_116
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 38028_ZDA_11; 111/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 38028_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 85132_ZEA_11; 112/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 85132_ZEA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34887_ZBP_12; 113/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34887_ZBP_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1003_ZC_14; 114/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1003_ZC_14
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 23011_ZD_11; 115/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 23011_ZD_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZDA_12; 116/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1065_ZDA_11; 117/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1065_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 34789_ZDA_11; 118/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 34789_ZDA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 1393_ZDA_12; 119/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 1393_ZDA_12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 33781_ZC_; 120/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 33781_ZC_
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-1 starts audit for 85581_ZEA_11; 121/121
+INFO   2014-12-09 09:33:31[NeConnector] Audit skipped for 85581_ZEA_11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-66 starts audit for 0024_ZEA_12; 9/79
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-44 starts audit for 6556_ZD_11; 3/141
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 0139_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0139_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-51 starts audit for 23236_ZC_11; 4/120
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0987_ZC_14; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-56 starts audit for 0987_ZC_12; 2/32
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1339_ZC_12; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-54 starts audit for 1339_ZC_13; 2/208
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0263_ZDA_14; svr: 5.0.10.12
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-138 starts audit for 0263_ZDA_11; 15/58
+ERROR  2014-12-09 09:33:31[NeConnector] collectFromNE fails for 19992_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 19992_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-70 starts audit for 4990_ZD_11; 4/96
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 6921_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-21 starts audit for 11785_ZC_11; 5/97
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1165_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-101 starts audit for 1165_ZC_12; 2/118
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 0472_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-86 starts audit for 6017_ZFA_11; 6/63
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 33447_ZC_13; svr: 1.4.3018
+INFO   2014-12-09 09:33:31[NeConnector] pool-2-thread-139 starts audit for 33447_ZC_11; 2/53
+INFO   2014-12-09 09:33:31[NeConnector] Audit completed for 1691_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-75 starts audit for 30038_ZC_15; 3/84
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 4560_ZEA_11; Error is :java.lang.NullPointerException
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 0024_ZEA_12; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 8215_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3140_ZC_13; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-63 starts audit for 3140_ZC_12; 2/38
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 6017_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-67 starts audit for 0983_ZEA_11; 2/210
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0024_ZEA_12; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 1220_ZA_23; 10/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 1220_ZA_23
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 4560_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-86 starts audit for 35961_ZEA_11; 7/63
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 1220_ZA_24; 11/79
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-57 starts audit for 7731_ZFA_11; 3/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 1220_ZA_24
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 88110_ZD_11; 12/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 88110_ZD_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 32211_ZBP_21; 13/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 32211_ZBP_21
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 82534_ZD_12; 14/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 82534_ZD_12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 82534_ZD_11; 15/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 82534_ZD_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 82534_ZD_13; 16/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 82534_ZD_13
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-66 starts audit for 35077_ZC_13; 17/79
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0390_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-95 starts audit for 0390_ZC_12; 2/139
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 47129_ZD_11; svr: 2.5.6323
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-132 starts audit for 3140_ZEA_12; 2/4
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0141_ZC_18; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-116 starts audit for 0141_ZC_15; 2/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 6045_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-110 starts audit for 13027_ZDA_11; 4/113
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 80525_ZEA_11; Error is :java.lang.NullPointerException
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 34830_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 80525_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 0024_ZA_11; 10/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 34830_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0024_ZA_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-23 starts audit for 34824_ZFA_11; 7/114
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 0024_ZA_12; 11/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0024_ZA_12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3286_ZBP_11; 12/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 3286_ZBP_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 47414_ZBP_11; 13/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 47414_ZBP_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 11861_ZBS_13; 14/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 11861_ZBS_13
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 33212_ZBP_11; 15/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 33212_ZBP_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3229_ZBP_15; 16/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 3229_ZBP_15
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3229_ZBP_16; 17/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 3229_ZBP_16
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3229_ZBP_17; 18/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 3229_ZBP_17
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3229_ZBP_13; 19/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 3229_ZBP_13
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 32637_ZBP_16; 20/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 32637_ZBP_16
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-140 starts audit for 3284_ZC_14; 21/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 4207_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 32186_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-145 starts audit for 8014_ZC_12; 2/195
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0263_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 13027_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 11499_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-82 starts audit for 4451_ZA_11; 2/55
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 0263_ZDA_12; 16/58
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-111 starts audit for 32186_ZC_12; 2/201
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 4451_ZA_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-110 starts audit for 1664_ZC_19; 5/113
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-82 starts audit for 4451_ZA_12; 3/55
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 4451_ZA_12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-82 starts audit for 14989_ZC_12; 4/55
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 3140_ZEA_12; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3140_ZEA_12; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-132 starts audit for 3140_ZD_15; 3/4
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 0983_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0983_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-67 starts audit for 3228_ZDA_11; 3/210
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 7731_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-57 starts audit for 30960_ZBP_21; 4/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 30960_ZBP_21
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-57 starts audit for 34849_ZBP_21; 5/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 34849_ZBP_21
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-57 starts audit for 37462_ZD_12; 6/49
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3147_ZD_11; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-102 starts audit for 0724_ZA_23; 5/94
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0724_ZA_23
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-102 starts audit for 0724_ZA_22; 6/94
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0724_ZA_22
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-102 starts audit for 0349_ZDA_11; 7/94
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3228_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-67 starts audit for 3580_ZDA_11; 4/210
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0349_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-102 starts audit for 1282_ZC_11; 8/94
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3580_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-67 starts audit for 23416_ZDA_11; 5/210
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 35961_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 35961_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-86 starts audit for 19706_ZFA_11; 8/63
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 23416_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-67 starts audit for 6064_ZC_11; 6/210
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 73026_ZD_11; svr: 2.5.6317
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-137 starts audit for 0461_ZEA_11; 4/206
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 19706_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-86 starts audit for 73519_ZDA_11; 9/63
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 1768_ZD_12; svr: 2.5.6317
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-107 starts audit for 1768_ZD_11; 7/22
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0853_ZC_12; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-127 starts audit for 0853_ZC_11; 2/24
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0153_ZC_15; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-35 starts audit for 0153_ZC_14; 4/25
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0073_ZD_110; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-45 starts audit for 6660_ZBS_11; 2/136
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 6660_ZBS_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-45 starts audit for 59335_ZD_11; 3/136
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0263_ZDA_12; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 11858_ZBS_11; 17/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 11858_ZBS_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 8525_ZBP_14; 18/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 8525_ZBP_14
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 8525_ZBP_13; 19/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 8525_ZBP_13
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 8536_ZBP_11; 20/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 8536_ZBP_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 0262_ZA_12; 21/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0262_ZA_12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 8366_ZBP_14; 22/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 8366_ZBP_14
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 0262_ZA_11; 23/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3788_ZDA_11; svr: 5.0.10.12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-24 starts audit for 11321_ZBP_11; 10/81
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 11321_ZBP_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-24 starts audit for 4262_ZC_11; 11/81
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 0262_ZA_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-138 starts audit for 8366_ZC_12; 24/58
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 34824_ZFA_11; svr: 2.1.11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-23 starts audit for 37520_ZA_12; 8/114
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 37520_ZA_12
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-23 starts audit for 37520_ZA_11; 9/114
+INFO   2014-12-09 09:33:32[NeConnector] Audit skipped for 37520_ZA_11
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-23 starts audit for 5999_ZC_11; 10/114
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0413_ZC_13; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-28 starts audit for 0413_ZC_12; 7/82
+ERROR  2014-12-09 09:33:32[NeConnector] collectFromNE fails for 0461_ZEA_11; Error is :java.lang.NullPointerException
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0461_ZEA_11; svr: 2.8.32
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-137 starts audit for 0457_ZD_16; 5/206
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 35990_ZD_13; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-55 starts audit for 35990_ZD_12; 2/44
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 0883_ZD_12; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-98 starts audit for 0883_ZD_11; 2/195
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 5602_ZC_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-85 starts audit for 4357_ZD_11; 2/128
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 5837_ZD_14; svr: 2.5.6327
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-96 starts audit for 5837_ZD_15; 3/29
+INFO   2014-12-09 09:33:32[NeConnector] Audit completed for 3815_ZD_11; svr: 1.4.3018
+INFO   2014-12-09 09:33:32[NeConnector] pool-2-thread-53 starts audit for 1924_ZD_12; 2/117

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+	<device type="FPMR ODU" family="ODU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.2.1.1.0">
+		<version svr="2.5.6327">
+			<param type="scalar" name="License Mask">
+				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.3.3.2.0</oid>
+				<expected>393407</expected>
+			</param>
+		</version>
+		
+	</device>
+	<device type="FlexiPacket" family="ODU" oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.2.1.1.0">
+		<version svr="1.4.3018">
+			<param type="scalar" name="Received Signal Level">
+				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.13.4.12.0</oid>
+			</param>
+			
+		</version>
+	</device>
+</devices>

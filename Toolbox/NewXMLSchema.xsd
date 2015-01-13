@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+    <element name="devices" type="tns:deviceType"></element>
+    
+
+    <complexType name="deviceType">
+    	<attribute name="family" type="string"></attribute>
+    </complexType>
+
+    <complexType name="paramType">
+    	<attribute name="kind" type="tns:kindType"></attribute>
+    </complexType>
+
+    <simpleType name="kindType">
+    	<restriction base="string">
+    		<enumeration value="scalar"></enumeration>
+    		<enumeration value="table"></enumeration>
+    	</restriction>
+    </simpleType>
+</schema>
