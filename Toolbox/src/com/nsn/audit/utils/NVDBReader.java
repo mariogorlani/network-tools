@@ -1,14 +1,13 @@
 package com.nsn.audit.utils;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Properties;
+
+
+
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import com.nsn.audit.dataset.NE;
 
 public class NVDBReader {
-	HashMap<String,ArrayList<NE>> ringsList;
+	//HashMap<String,ArrayList<NE>> ringsList;
 	String userName = "sa";
 	String password = "Welc0me2NSN";
 	String url;
@@ -34,9 +33,6 @@ public class NVDBReader {
 		}
 	}
 
-	public HashMap<String, ArrayList<NE>> getRingsList() {
-		return ringsList;
-	}
 
 	public HashMap<String, NE> extractType(HashMap<String, NE> neList) {
 		try {
@@ -68,7 +64,7 @@ public class NVDBReader {
 		}
 		return neList;
 	}
-	
+
 	public HashMap<String, NE> extractDisconnections(HashMap<String, NE> neList) {
 		try {
 			NE ne;
@@ -101,6 +97,124 @@ public class NVDBReader {
 			log.debug("ERRORs: " + err);
 		}
 		return neList;
+	}
+
+	/*
+	 * Get performance data
+	 */
+	public ArrayList<String> getAllPerformanceData(String table, String counter){
+
+		Connection conn;
+		ArrayList<String> results = new ArrayList<String>();
+		try {
+			conn = DriverManager.getConnection(url, userName, password);
+			Statement stat = conn.createStatement();
+			String sql =  "( SELECT name AS Name, tp_name AS Port, cast(time_start AS date) AS Date , '"+counter+"' AS KPI "+ 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(2*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(2*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour02Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(2*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(2*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour02Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(2*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(2*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour02Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(2*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(2*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour02Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(3*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(3*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour03Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(3*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(3*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour03Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(3*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(3*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour03Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(3*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(3*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour03Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(4*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(4*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour04Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(4*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(4*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour04Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(4*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(4*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour04Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(4*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(4*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour04Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(5*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(5*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour05Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(5*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(5*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour05Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(5*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(5*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour05Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(5*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(5*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour05Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(6*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(6*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour06Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(6*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(6*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour06Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(6*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(6*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour06Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(6*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(6*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour06Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(7*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(7*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour07Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(7*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(7*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour07Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(7*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(7*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour07Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(7*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(7*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour07Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(8*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(8*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour08Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(8*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(8*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour08Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(8*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(8*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour08Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(8*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(8*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour08Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(9*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(9*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour09Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(9*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(9*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour09Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(9*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(9*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour09Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(9*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(9*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour09Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(10*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(10*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour10Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(10*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(10*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour10Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(10*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(10*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour10Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(10*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(10*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour10Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(11*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(11*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour11Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(11*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(11*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour11Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(11*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(11*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour11Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(11*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(11*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour11Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(12*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(12*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour12Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(12*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(12*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour12Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(12*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(12*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour12Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(12*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(12*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour12Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(13*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(13*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour13Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(13*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(13*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour13Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(13*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(13*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour13Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(13*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(13*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour13Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(14*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(14*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour14Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(14*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(14*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour14Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(14*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(14*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour14Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(14*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(14*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour14Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(15*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(15*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour15Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(15*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(15*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour15Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(15*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(15*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour15Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(15*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(15*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour15Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(16*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(16*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour16Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(16*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(16*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour16Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(16*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(16*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour16Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(16*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(16*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour16Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(17*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(17*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour17Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(17*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(17*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour17Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(17*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(17*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour17Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(17*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(17*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour17Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(18*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(18*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour18Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(18*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(18*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour18Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(18*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(18*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour18Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(18*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(18*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour18Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(19*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(19*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour19Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(19*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(19*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour19Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(19*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(19*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour19Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(19*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(19*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour19Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(20*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(20*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour20Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(20*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(20*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour20Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(20*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(20*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour20Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(20*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(20*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour20Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(21*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(21*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour21Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(21*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(21*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour21Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(21*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(21*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour21Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(21*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(21*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour21Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(22*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(22*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour22Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(22*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(22*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour22Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(22*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(22*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour22Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(22*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(22*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour22Min45 " + 
+					"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(23*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(23*60)+(15*0),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour23Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(23*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(23*60)+(15*1),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour23Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(23*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(23*60)+(15*2),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour23Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(23*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(23*60)+(15*3),cast(DATEADD(day, -1, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour23Min45 " + 
+					"FROM " + 
+					"( " + 
+					"SELECT " + 
+					table+".date_time AS time_start, " + 
+					table+".date_time_end AS time_end, " + 
+					table+".tp_name, " + 
+					"	ne_working_mode_g.name, " + 
+					"	sum(cast("+table+"."+counter+" as BigInt)) AS KPI " + 
+					"FROM NetViewer.dbo."+table+" " + 
+					"LEFT JOIN NetViewer.dbo.ne_working_mode_g " + 
+					"	 ON ((NetViewer.dbo."+table+".ne_sub_id = NetViewer.dbo.ne_working_mode_g.sub_id) " + 
+					"		AND (NetViewer.dbo."+table+".ne_working_mode_id = NetViewer.dbo.ne_working_mode_g.id)) " + 
+					"WHERE (cast("+table+".date_time AS date) = cast(DATEADD(day, -1, GETDATE()) AS date)) " + 
+					"GROUP BY "+table+".date_time, " + 
+					"		 "+table+".date_time_end ,"+table+".tp_name, " + 
+					"		 ne_working_mode_g.name " + 
+					") AS foo1 " + 
+					"GROUP BY cast([time_start] AS date), name, tp_name)";
+			ResultSet rs = stat.executeQuery(sql);
+			if (rs != null) {
+				ResultSetMetaData metaData = rs.getMetaData();
+				int columns = metaData.getColumnCount();
+				String record = new String();
+				while (rs.next()) {
+					for (int i = 1; i <= columns; i++) {
+						if (rs.getString(i)!=null) record.concat(rs.getString(i));
+						record.concat(",");
+					}
+					results.add(record);
+//					results.add(rs.getString("Name")+","+rs.getString("Port")+","+rs.getString("Date")+","+rs.getString("KPI")+
+//							rs.getString("Hour00Min00")+","+
+//							rs.getString("Hour00Min15")+","+
+//							rs.getString("Hour00Min30")+","+
+//							rs.getString("Hour00Min45")+","+
+//							rs.getString("Hour01Min00")+","+
+//							rs.getString("Hour01Min15")+","+
+//							rs.getString("Hour01Min30")+","+
+//							rs.getString("Hour01Min45")+","+
+//							rs.getString("Hour02Min00")+","+rs.getString("Hour02Min15")+","+
+//							rs.getString("Hour02Min30")+","+rs.getString("Hour02Min45")+","+
+//							rs.getString("Hour03Min00")+","+rs.getString("Hour03Min15")+","+
+//							rs.getString("Hour03Min30")+","+rs.getString("Hour03Min45")+","+
+//							rs.getString("Hour04Min00")+","+rs.getString("Hour04Min15")+","+
+//							rs.getString("Hour04Min30")+","+rs.getString("Hour04Min45")+","+
+//							rs.getString("Hour05Min00")+","+rs.getString("Hour05Min15")+","+
+//							rs.getString("Hour05Min30")+","+rs.getString("Hour05Min45")+","+
+//							rs.getString("Hour06Min00")+","+rs.getString("Hour06Min15")+","+
+//							rs.getString("Hour06Min30")+","+rs.getString("Hour06Min45")+","+rs.getString("Hour07Min00")+","+
+//							rs.getString("Hour07Min15")+","+rs.getString("Hour07Min30")+","+rs.getString("Hour07Min45")+","+
+//							rs.getString("Hour08Min00")+","+rs.getString("Hour08Min15")+","+rs.getString("Hour08Min30")+","+
+//							rs.getString("Hour08Min45")+","+rs.getString("Hour09Min00")+","+rs.getString("Hour09Min15")+","+
+//							rs.getString("Hour09Min30")+","+rs.getString("Hour09Min45")+","+rs.getString("Hour10Min00")+","+
+//							rs.getString("Hour10Min15")+","+rs.getString("Hour10Min30")+","+rs.getString("Hour10Min45")+","+
+//							rs.getString("Hour11Min00")+","+rs.getString("Hour11Min15")+","+rs.getString("Hour11Min30")+","+
+//							rs.getString("Hour11Min45")+","+rs.getString("Hour12Min00")+","+rs.getString("Hour12Min15")+","+
+//							rs.getString("Hour12Min30")+","+rs.getString("Hour12Min45")+","+rs.getString("Hour13Min00")+","+
+//							rs.getString("Hour13Min15")+","+rs.getString("Hour13Min30")+","+rs.getString("Hour13Min45")+","+
+//							rs.getString("Hour14Min00")+","+rs.getString("Hour14Min15")+","+rs.getString("Hour14Min30")+","+
+//							rs.getString("Hour14Min45")+","+rs.getString("Hour15Min00")+","+rs.getString("Hour15Min15")+","+
+//							rs.getString("Hour15Min30")+","+rs.getString("Hour15Min45")+","+rs.getString("Hour16Min00")+","+
+//							rs.getString("Hour16Min15")+","+rs.getString("Hour16Min30")+","+rs.getString("Hour16Min45")+","+
+//							rs.getString("Hour17Min00")+","+rs.getString("Hour17Min15")+","+rs.getString("Hour17Min30")+","+
+//							rs.getString("Hour17Min45")+","+rs.getString("Hour18Min00")+","+rs.getString("Hour18Min15")+","+
+//							rs.getString("Hour18Min30")+","+rs.getString("Hour18Min45")+","+rs.getString("Hour19Min00")+","+
+//							rs.getString("Hour19Min15")+","+rs.getString("Hour19Min30")+","+rs.getString("Hour19Min45")+","+
+//							rs.getString("Hour20Min00")+","+rs.getString("Hour20Min15")+","+rs.getString("Hour20Min30")+","+
+//							rs.getString("Hour20Min45")+","+rs.getString("Hour21Min00")+","+rs.getString("Hour21Min15")+","+
+//							rs.getString("Hour21Min30")+","+rs.getString("Hour21Min45")+","+rs.getString("Hour22Min00")+","+
+//							rs.getString("Hour22Min15")+","+rs.getString("Hour22Min30")+","+rs.getString("Hour22Min45")+","+
+//							rs.getString("Hour23Min00")+","+rs.getString("Hour23Min15")+","+rs.getString("Hour23Min30")+","+
+//							rs.getString("Hour23Min45"));
+				}
+			}
+			stat.close();
+			conn.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return results;
+
 	}
 
 	/*

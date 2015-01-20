@@ -118,21 +118,20 @@ public class NeConnector implements Runnable{
 		List<TableEvent> events = tUtils.getTable(comtarget, columnOid, null, null);
 		String[] list = new String[events.size()];
 		int i = 0;
-		if (events!=null)
-			for (TableEvent event : events) {
-				if (event.isError()) {
-					log.error("readSNMPTable failed for " + comtarget.getAddress() + "; error is "+ event.getErrorMessage());
-				} else{
-					StringBuilder sb = new StringBuilder();
-					for (int j = 0; j < event.getColumns().length; j++) {
-						sb.append(event.getColumns()[j].getVariable().toString());
-						if (j<event.getColumns().length-1) sb.append(GenericDefinitions.VarbindSeparator);
-					} 
-					list[i]=sb.toString();
-				}
-
-				i++;
+		for (TableEvent event : events) {
+			if (event.isError()) {
+				log.error("readSNMPTable failed for " + comtarget.getAddress() + "; error is "+ event.getErrorMessage());
+			} else{
+				StringBuilder sb = new StringBuilder();
+				for (int j = 0; j < event.getColumns().length; j++) {
+					sb.append(event.getColumns()[j].getVariable().toString());
+					if (j<event.getColumns().length-1) sb.append(GenericDefinitions.VarbindSeparator);
+				} 
+				list[i]=sb.toString();
 			}
+
+			i++;
+		}
 		return list;
 	}
 
