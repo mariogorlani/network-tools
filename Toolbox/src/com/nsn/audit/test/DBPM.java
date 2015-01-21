@@ -11,7 +11,9 @@ public class DBPM {
 		System.out.println(System.currentTimeMillis());
 		NVDBReader nvdb = new NVDBReader("uknetvab", "NorthServer1");
 		System.out.println(System.currentTimeMillis());
-		ArrayList<String> all = nvdb.getAllPerformanceData("pm_15m_rspi","RLTM_min");
+		ArrayList<String> all = new ArrayList<String>();
+		all.add("");
+		all.addAll(nvdb.getAllPerformanceData("pm_15m_rspi","RLTM_min"));
 		for (Iterator iterator = all.iterator(); iterator.hasNext();) {
 			System.out.println((String) iterator.next());
 			

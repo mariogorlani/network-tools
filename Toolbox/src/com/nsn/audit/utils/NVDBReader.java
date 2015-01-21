@@ -156,55 +156,13 @@ public class NVDBReader {
 			if (rs != null) {
 				ResultSetMetaData metaData = rs.getMetaData();
 				int columns = metaData.getColumnCount();
-				String record = new String();
 				while (rs.next()) {
+					String record = new String();
 					for (int i = 1; i <= columns; i++) {
-						if (rs.getString(i)!=null) record.concat(rs.getString(i));
-						record.concat(",");
+						if (rs.getString(i)!=null) record = record + rs.getString(i);
+						record= record+",";
 					}
 					results.add(record);
-//					results.add(rs.getString("Name")+","+rs.getString("Port")+","+rs.getString("Date")+","+rs.getString("KPI")+
-//							rs.getString("Hour00Min00")+","+
-//							rs.getString("Hour00Min15")+","+
-//							rs.getString("Hour00Min30")+","+
-//							rs.getString("Hour00Min45")+","+
-//							rs.getString("Hour01Min00")+","+
-//							rs.getString("Hour01Min15")+","+
-//							rs.getString("Hour01Min30")+","+
-//							rs.getString("Hour01Min45")+","+
-//							rs.getString("Hour02Min00")+","+rs.getString("Hour02Min15")+","+
-//							rs.getString("Hour02Min30")+","+rs.getString("Hour02Min45")+","+
-//							rs.getString("Hour03Min00")+","+rs.getString("Hour03Min15")+","+
-//							rs.getString("Hour03Min30")+","+rs.getString("Hour03Min45")+","+
-//							rs.getString("Hour04Min00")+","+rs.getString("Hour04Min15")+","+
-//							rs.getString("Hour04Min30")+","+rs.getString("Hour04Min45")+","+
-//							rs.getString("Hour05Min00")+","+rs.getString("Hour05Min15")+","+
-//							rs.getString("Hour05Min30")+","+rs.getString("Hour05Min45")+","+
-//							rs.getString("Hour06Min00")+","+rs.getString("Hour06Min15")+","+
-//							rs.getString("Hour06Min30")+","+rs.getString("Hour06Min45")+","+rs.getString("Hour07Min00")+","+
-//							rs.getString("Hour07Min15")+","+rs.getString("Hour07Min30")+","+rs.getString("Hour07Min45")+","+
-//							rs.getString("Hour08Min00")+","+rs.getString("Hour08Min15")+","+rs.getString("Hour08Min30")+","+
-//							rs.getString("Hour08Min45")+","+rs.getString("Hour09Min00")+","+rs.getString("Hour09Min15")+","+
-//							rs.getString("Hour09Min30")+","+rs.getString("Hour09Min45")+","+rs.getString("Hour10Min00")+","+
-//							rs.getString("Hour10Min15")+","+rs.getString("Hour10Min30")+","+rs.getString("Hour10Min45")+","+
-//							rs.getString("Hour11Min00")+","+rs.getString("Hour11Min15")+","+rs.getString("Hour11Min30")+","+
-//							rs.getString("Hour11Min45")+","+rs.getString("Hour12Min00")+","+rs.getString("Hour12Min15")+","+
-//							rs.getString("Hour12Min30")+","+rs.getString("Hour12Min45")+","+rs.getString("Hour13Min00")+","+
-//							rs.getString("Hour13Min15")+","+rs.getString("Hour13Min30")+","+rs.getString("Hour13Min45")+","+
-//							rs.getString("Hour14Min00")+","+rs.getString("Hour14Min15")+","+rs.getString("Hour14Min30")+","+
-//							rs.getString("Hour14Min45")+","+rs.getString("Hour15Min00")+","+rs.getString("Hour15Min15")+","+
-//							rs.getString("Hour15Min30")+","+rs.getString("Hour15Min45")+","+rs.getString("Hour16Min00")+","+
-//							rs.getString("Hour16Min15")+","+rs.getString("Hour16Min30")+","+rs.getString("Hour16Min45")+","+
-//							rs.getString("Hour17Min00")+","+rs.getString("Hour17Min15")+","+rs.getString("Hour17Min30")+","+
-//							rs.getString("Hour17Min45")+","+rs.getString("Hour18Min00")+","+rs.getString("Hour18Min15")+","+
-//							rs.getString("Hour18Min30")+","+rs.getString("Hour18Min45")+","+rs.getString("Hour19Min00")+","+
-//							rs.getString("Hour19Min15")+","+rs.getString("Hour19Min30")+","+rs.getString("Hour19Min45")+","+
-//							rs.getString("Hour20Min00")+","+rs.getString("Hour20Min15")+","+rs.getString("Hour20Min30")+","+
-//							rs.getString("Hour20Min45")+","+rs.getString("Hour21Min00")+","+rs.getString("Hour21Min15")+","+
-//							rs.getString("Hour21Min30")+","+rs.getString("Hour21Min45")+","+rs.getString("Hour22Min00")+","+
-//							rs.getString("Hour22Min15")+","+rs.getString("Hour22Min30")+","+rs.getString("Hour22Min45")+","+
-//							rs.getString("Hour23Min00")+","+rs.getString("Hour23Min15")+","+rs.getString("Hour23Min30")+","+
-//							rs.getString("Hour23Min45"));
 				}
 			}
 			stat.close();
