@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -97,4 +98,24 @@ public class MDBReader {
 		}
 		return neList;
 	}
-}
+
+	public ArrayList<String> extractMapVFEs() {
+		ArrayList<String> results = new ArrayList<String>();
+		try {
+			Connection conn=DriverManager.getConnection(url);
+			Statement stat = conn.createStatement();
+			stat = conn.createStatement();
+			String sql = "SELECT TEXT_INFO, MAP_NAME from TEXT_INFO LEFT JOIN MAP ON (TEXT_INFO.MAP_OWNER_ID=MAP.ID_POS) where text_info like 'VFE%'"; 
+			ResultSet rs = stat.executeQuery(sql);
+			if (rs != null) 
+				while (rs.next())
+					results.add(this.server+","+rs.getString("TEXT_INFO")+","+rs.getString("MAP_NAME"));
+			stat.close();
+			conn.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return results;
+	}
+}	
