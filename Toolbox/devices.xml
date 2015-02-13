@@ -3,6 +3,37 @@
 	<device type="FP MultiRadio" family="ODU" publicCommunity="readonly"
 		oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.2.1.1.0">
 		<version svr="2.5">
+			<param type="scalar" name="License">
+				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.3.3.2.0</oid>
+			</param>
+			<param type="table" order="no" name="Interfaces">
+				<column>
+					<name>ifIndex</name>
+					<oid>.1.3.6.1.2.1.2.2.1.1</oid>
+				</column>
+
+				<column>
+					<name>ifType</name>
+					<oid>.1.3.6.1.2.1.2.2.1.3</oid>
+				</column>
+				<column>
+					<name>ifMtu</name>
+					<oid>.1.3.6.1.2.1.2.2.1.4</oid>
+				</column>
+				<column>
+					<name>ifSpeed</name>
+					<oid>.1.3.6.1.2.1.2.2.1.5</oid>
+				</column>
+				<column>
+					<name>ifAdminStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.7</oid>
+				</column>
+				<column>
+					<name>ifOperationalStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.8</oid>
+				</column>
+			</param>
+
 			<param type="scalar" name="ACM_Static_Tx_Profile">
 				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.11.3.1.0</oid>
 				<enum value="1">QPSK</enum>
@@ -43,9 +74,6 @@
 				<enum value="6">channel-spacing-40MHz</enum>
 				<enum value="7">channel-spacing-56MHz</enum>
 				<enum value="8">channel-spacing-112MHz</enum>
-			</param>
-			<param type="scalar" name="License_Mask">
-				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.3.3.2.0</oid>
 			</param>
 			<param type="scalar" name="WFQ_Q8Weight">
 				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.5.1.15.3.12.0</oid>
@@ -111,6 +139,38 @@
 	<device type="FP Radio" family="ODU" publicCommunity="readonly"
 		oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.2.1.1.0">
 		<version svr="1.4">
+			<param type="scalar" name="License">
+				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.3.3.2.0</oid>
+			</param>
+
+			<param type="table" order="no" name="Interfaces">
+				<column>
+					<name>ifIndex</name>
+					<oid>.1.3.6.1.2.1.2.2.1.1</oid>
+				</column>
+
+				<column>
+					<name>ifType</name>
+					<oid>.1.3.6.1.2.1.2.2.1.3</oid>
+				</column>
+				<column>
+					<name>ifMtu</name>
+					<oid>.1.3.6.1.2.1.2.2.1.4</oid>
+				</column>
+				<column>
+					<name>ifSpeed</name>
+					<oid>.1.3.6.1.2.1.2.2.1.5</oid>
+				</column>
+				<column>
+					<name>ifAdminStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.7</oid>
+				</column>
+				<column>
+					<name>ifOperationalStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.8</oid>
+				</column>
+			</param>
+
 			<param type="scalar" name="ACM_Static_Tx_Profile">
 				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.11.3.1.0</oid>
 				<enum value="1">4QAM</enum>
@@ -155,9 +215,6 @@
 				<enum value="8">channel-spacing-20MHz</enum>
 				<enum value="9">channel-spacing-30MHz</enum>
 				<enum value="10">channel-spacing-40MHz</enum>
-			</param>
-			<param type="scalar" name="License Mask">
-				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.3.3.2.0</oid>
 			</param>
 			<param type="scalar" name="StrictPriorityQueueNum">
 				<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.1.1.15.3.25.1.0</oid>
@@ -224,12 +281,68 @@
 	</device>
 	<device type="FP Hub 2200" family="IDU" publicCommunity="public"
 		oidsvr=".1.3.6.1.2.1.47.1.1.1.1.10.1">
-		<version svr="5.0.10.12">
+		<version svr="5.0">
+			<param type="table" order="no" name="Interfaces">
+				<column>
+					<name>ifIndex</name>
+					<oid>.1.3.6.1.2.1.2.2.1.1</oid>
+				</column>
+
+				<column>
+					<name>ifType</name>
+					<oid>.1.3.6.1.2.1.2.2.1.3</oid>
+				</column>
+				<column>
+					<name>ifMtu</name>
+					<oid>.1.3.6.1.2.1.2.2.1.4</oid>
+				</column>
+				<column>
+					<name>ifSpeed</name>
+					<oid>.1.3.6.1.2.1.2.2.1.5</oid>
+				</column>
+				<column>
+					<name>ifAdminStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.7</oid>
+				</column>
+				<column>
+					<name>ifOperationalStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.8</oid>
+				</column>
+			</param>
 		</version>
 	</device>
 	<device type="FP Hub 800" family="IDU" publicCommunity="readonly"
 		oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.2.1.1">
 		<version svr="2.8">
+			<param type="table" order="no" name="Interfaces">
+				<column>
+					<name>ifIndex</name>
+					<oid>.1.3.6.1.2.1.2.2.1.1</oid>
+				</column>
+
+				<column>
+					<name>ifType</name>
+					<oid>.1.3.6.1.2.1.2.2.1.3</oid>
+				</column>
+				<column>
+					<name>ifMtu</name>
+					<oid>.1.3.6.1.2.1.2.2.1.4</oid>
+				</column>
+				<column>
+					<name>ifSpeed</name>
+					<oid>.1.3.6.1.2.1.2.2.1.5</oid>
+				</column>
+				<column>
+					<name>ifAdminStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.7</oid>
+				</column>
+				<column>
+					<name>ifOperationalStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.8</oid>
+				</column>
+			</param>
+
+
 			<param type="table" order="no" name="Synch">
 				<column>
 					<name>SynchSourcePriority</name>
@@ -254,7 +367,53 @@
 	</device>
 	<device type="FP FirstMile 200" family="IDU" publicCommunity="readonly"
 		oidsvr=".1.3.6.1.4.1.28458.1.10.1.2.2.5.3.1.2.1.1">
-		<version svr="2.1.11">
+		<version svr="2.1">
+			<param type="table" order="no" name="Interfaces">
+				<column>
+					<name>ifIndex</name>
+					<oid>.1.3.6.1.2.1.2.2.1.1</oid>
+				</column>
+
+				<column>
+					<name>ifType</name>
+					<oid>.1.3.6.1.2.1.2.2.1.3</oid>
+				</column>
+				<column>
+					<name>ifMtu</name>
+					<oid>.1.3.6.1.2.1.2.2.1.4</oid>
+				</column>
+				<column>
+					<name>ifSpeed</name>
+					<oid>.1.3.6.1.2.1.2.2.1.5</oid>
+				</column>
+				<column>
+					<name>ifAdminStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.7</oid>
+				</column>
+				<column>
+					<name>ifOperationalStatus</name>
+					<oid>.1.3.6.1.2.1.2.2.1.8</oid>
+				</column>
+			</param>
+			<param type="table" order="no" name="Synch">
+				<column>
+					<name>SynchSourcePriority</name>
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.8.3.2.1.2</oid>
+				</column>
+				<column>
+					<name>SynchSourceType</name>
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.8.3.2.1.3</oid>
+				</column>
+				<column>
+					<name>SynchSourcePortIndex</name>
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.8.3.2.1.4</oid>
+				</column>
+				<column>
+					<name>SynchSourceStatus</name>
+					<oid>.1.3.6.1.4.1.28458.1.10.1.2.2.5.4.1.8.3.2.1.6</oid>
+				</column>
+
+			</param>
 		</version>
 	</device>
 </devices>

@@ -62,7 +62,7 @@ public class NeConnector implements Runnable{
 			snmpTransport = new Snmp(transport);
 		} catch (IOException e) {
 			log.error(e);
-			System.exit(0);
+			//System.exit(0);
 		}
 	}
 
@@ -137,7 +137,7 @@ public class NeConnector implements Runnable{
 
 	// Read scalar
 	public String readSNMPScalar(String oid) {
-		String output = "";
+		String output = null;
 		// Create the PDU object
 		PDU pdu_GetOid = createPduGet(oid);
 		try {
@@ -258,7 +258,7 @@ public class NeConnector implements Runnable{
 		while (itr.hasNext()) {
 			count++;
 			NE actualNE = itr.next();
-			log.info(Thread.currentThread().getName()+" starts audit for "+ actualNE.getName()+"; " + count +"/"+neList.size());
+			log.info(Thread.currentThread().getName()+" start audit for "+ actualNE.getName()+"; " + count +"/"+neList.size());
 			try {
 				if (validateNE(actualNE)) {
 					comtarget.setAddress(new UdpAddress(actualNE.getIP() + "/" + GenericDefinitions.port));

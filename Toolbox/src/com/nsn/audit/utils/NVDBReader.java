@@ -55,7 +55,7 @@ public class NVDBReader {
 						neList.put(rs.getString("name"),ne);
 					}
 					else
-						log.info("extractType null for "+rs.getString("name") + " count "+ count);
+						log.debug(rs.getString("name") + " doesn't exist anymore in mdb map");
 				}
 			}
 			stat.close();
@@ -89,7 +89,7 @@ public class NVDBReader {
 						neList.put(rs.getString("name"),ne);
 					}
 					else
-						log.info("extractDisconnections found "+rs.getString("name") + " count "+ count+ " no more existing!");
+						log.debug("extractDisconnections found "+rs.getString("name") + " count "+ count+ " no more existing!");
 				}
 			}
 			stat.close();

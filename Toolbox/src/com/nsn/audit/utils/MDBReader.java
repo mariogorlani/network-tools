@@ -74,19 +74,43 @@ public class MDBReader {
 			Connection conn=DriverManager.getConnection(url);
 			Statement st = conn.createStatement();
 			st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT ne.NE_NAME as name, txt.TEXT_INFO as vfe FROM NETWORK_ELEMENT AS ne"+ 
-					" LEFT JOIN TEXT_INFO AS txt ON (ne.MAP_OWNER_ID=txt.MAP_OWNER_ID) AND ((abs(ne.POSITION_X-txt.POS_X)<90) And (abs(ne.POSITION_Y-txt.POS_Y)<20))"+
-					" WHERE txt.TEXT_INFO like '%VFE%'");
-			if (rs != null) {
-				while (rs.next()) {
+			/*String sql = "SELECT ne.NE_NAME as name, txt.TEXT_INFO as vfe FROM NETWORK_ELEMENT AS ne"+ 
+					" LEFT JOIN TEXT_INFO AS txt ON (ne.MAP_OWNER_ID=txt.MAP_OWNER_ID) AND "
+					+ "((abs(ne.POSITION_X-txt.POS_X)<90) And (abs(ne.POSITION_Y-txt.POS_Y)<20))"+
+					" WHERE txt.TEXT_INFO like '%VFE%'";
+			sql = "select ID_POS, TEXT_INFO, POS_X, POS_Y, MAP_OWNER_ID  from TEXT_INFO where TEXT_INFO like 'VFE%'";*/
+			String sql = "select t.text_info as vfe, odu1, odu2 " + 
+					"from text_info as t " + 
+					"inner join ( " + 
+					"select nt1.ne_name as odu1, nt2.ne_name as odu2, " + 
+					"int((nt1.position_x + nt2.position_x) / 2) as avgx, " + 
+					"int((nt1.position_y + nt2.position_y)/2) as avgy,nt1.map_owner_id as map " + 
+					"from ((links as l " + 
+					"inner join network_element as nt1 on l.ne_1 = nt1.id_pos) " + 
+					"inner join network_element as nt2 on l.ne_2 = nt2.id_pos) " + 
+					") as sb " + 
+					"on (abs(t.POS_X-sb.avgx)<60) and (abs(t.POS_Y-sb.avgy)<40) and t.MAP_OWNER_ID=sb.map " + 
+					"where t.text_info like 'vfe%'";
+			ResultSet rsVFE = st.executeQuery(sql);
+			if (rsVFE != null) {
+				count=0;
+				while (rsVFE.next()) {
 					count++;
-					ne = neList.get(rs.getString("name"));
+					ne = neList.get(rsVFE.getString("odu1"));
 					if (ne!=null){
-						ne.setVFE(rs.getString("vfe")); 
-						neList.put(rs.getString("name"),ne);
+						ne.setVFE(rsVFE.getString("vfe")); 
+						neList.put(rsVFE.getString("odu1"),ne);
 					}
 					else
-						log.debug("null for "+rs.getString("name") + " count "+ count);
+						log.debug(rsVFE.getString("vfe")+" doesn't match any NE for "+ rsVFE.getString("odu1"));
+						
+					ne = neList.get(rsVFE.getString("odu2"));
+					if (ne!=null){
+						ne.setVFE(rsVFE.getString("vfe")); 
+						neList.put(rsVFE.getString("odu2"),ne);
+					}
+					else
+						log.debug(rsVFE.getString("vfe")+" doesn't match any NE for "+ rsVFE.getString("odu2"));
 				}
 				log.info("VFE for "+server+" are "+ count);
 			}

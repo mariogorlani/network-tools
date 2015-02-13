@@ -63,12 +63,8 @@ public class NetworkAudit {
 		//servers = "uknetvah";
 		servers = "uknetvab,uknetvac,uknetvad,uknetvae,uknetvag,uknetvah,uknetvai,uknetvaj";
 		xmlInput = "devices.xml";
-		path = "D:\\misc\\CRAMER\\";
-		//TODO improve args parsing with options label
-		if (args.length == 2) {
-			servers = args[0];
-			xmlInput = args[1];
-		}
+		//path = "D:\\misc\\CRAMER\\";
+		path = "D:\\misc\\temp\\";
 		log.info("Network Audit running on the servers: " + servers);
 	} 
 
@@ -83,7 +79,6 @@ public class NetworkAudit {
 		//TODO add a statistics object to measure the remaining NEs to be collected and the timing of the collection
 		HashMap<String, ArrayList<NE>> ringsNEList = createNEList(servers);
 		int ringsNumber = ringsNEList.size();
-		//ExecutorService executor = Executors.newFixedThreadPool(GenericDefinitions.maxThreadPool);
 		log.info("Creating "+ ringsNumber+" threads");
 		ExecutorService executor = Executors.newFixedThreadPool(ringsNumber);
 		for (Map.Entry<String, ArrayList<NE>> ring : ringsNEList.entrySet()) {
@@ -134,6 +129,8 @@ public class NetworkAudit {
 		try {
 			String[] servers = s.split(",");
 			String mapName = "";
+			int nes = 0;
+			int ringsNes = 0;
 			for (int i = 0; i < servers.length; i++) {
 				HashSet<String> ringsName = new HashSet<String>();
 				HashMap<String, NE> neList = new HashMap<String,NE>();
@@ -145,27 +142,38 @@ public class NetworkAudit {
 				neList = nvDB.extractType(neList);
 				neList = nvDB.extractDisconnections(neList);
 				Iterator<Entry<String, NE>> itr = neList.entrySet().iterator();
+				
 				while (itr.hasNext()) {
 					//if (((Map.Entry<String, NE>)itr.next()).getValue().getLocation()!="")
 					ringsName.add(((Map.Entry<String, NE>)itr.next()).getValue().getLocation());
+					nes++;
 				}
 				for (String ring : ringsName) {
 					ArrayList<NE> neListinRing = new ArrayList<NE>();
-					itr = neList.entrySet().iterator();
-					while (itr.hasNext()) {
-						NE ne = ((Map.Entry<String, NE>)itr.next()).getValue();
-						if (ne.getLocation().equals(ring)) neListinRing.add(ne);
+					Iterator<Entry<String, NE>> itr2 = neList.entrySet().iterator();
+					while (itr2.hasNext()) {
+						NE ne = ((Map.Entry<String, NE>)itr2.next()).getValue();
+						if (ne.getLocation().equals(ring)) {
+							neListinRing.add(ne);
+							ringsNes++;
+						}
 					}
 					ringsNEList.put(ring, neListinRing);
 				}
 			}
+			log.debug("counted: "+nes+"; added:" +ringsNes);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 		return ringsNEList;
 	}
-
+	
+	public static String transformLicence(String lic)
+	{
+		return Integer.toBinaryString(Integer.valueOf((lic.matches("\\d+"))?lic:"0"));
+	}
+	
 	/**
 	 * Print NE List with results
 	 */
@@ -173,7 +181,9 @@ public class NetworkAudit {
 		try {
 			log.info("Print all called");
 			PrintWriter NEs = new PrintWriter(path+"NEs.csv", "UTF-8");
+			PrintWriter NE2s = new PrintWriter(path+"NE2s.csv", "UTF-8");
 			NEs.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,ACM_Static_Tx_Profile,ACM_Most_Robust_profile,Synch");
+			NE2s.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,Ports,Tx,Rx,Max_Tx_Power,ATPC,Channel_Spacing,Licence");
 			PrintWriter QoS = new PrintWriter(path+"QoS.csv", "UTF-8");
 			QoS.println("Date,Name,IP,QoSCriteriaEnabled,IPPriority,WFQSchedulerScheme,StaticMulticastTableEn,StrictPriorityQueueNum,"+
 					"WFQSchedulerQ8Weight,WFQSchedulerQ7Weight,WFQSchedulerQ6Weight,WFQSchedulerQ5Weight,WFQSchedulerQ4Weight,WFQSchedulerQ3Weight,"+
@@ -197,6 +207,20 @@ public class NetworkAudit {
 							ne.getParam("ACM_Static_Tx_Profile")+","+
 							ne.getParam("ACM_Most_Robust_profile")+","+
 							ne.getParam("Synch"));
+					if (ne.getType().contains("FP")) {
+						NE2s.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+ringName+","+
+								ne.getType()+","+
+								ne.getVFE()+","+
+								ne.getConnStatus()+","+
+								ne.getDisconnections()+","+
+								ne.getParam("Interfaces")+","+
+								ne.getParam("Tx")+","+
+								ne.getParam("Rx")+","+
+								ne.getParam("Max_Tx_Power")+","+
+								ne.getParam("ATPC")+","+
+								ne.getParam("Channel")+","+
+								transformLicence(ne.getParam("License")));
+					}
 
 					if (ne.getType().contains("Radio")) {
 						RF.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+
