@@ -14,6 +14,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -60,7 +61,7 @@ public class NetworkAudit {
 	}
 
 	public NetworkAudit(String[] args) {
-		//servers = "uknetvah";
+		//servers = "uknetvae";
 		servers = "uknetvab,uknetvac,uknetvad,uknetvae,uknetvag,uknetvah,uknetvai,uknetvaj";
 		xmlInput = "devices.xml";
 		//path = "D:\\misc\\CRAMER\\";
@@ -77,7 +78,7 @@ public class NetworkAudit {
 		log.info("started at: " + new Date());
 		xmlReader = new XMLReader(xmlInput);
 		//TODO add a statistics object to measure the remaining NEs to be collected and the timing of the collection
-		HashMap<String, ArrayList<NE>> ringsNEList = createNEList(servers);
+		ConcurrentHashMap<String, ArrayList<NE>> ringsNEList = createNEList(servers);
 		int ringsNumber = ringsNEList.size();
 		log.info("Creating "+ ringsNumber+" threads");
 		ExecutorService executor = Executors.newFixedThreadPool(ringsNumber);
@@ -124,15 +125,16 @@ public class NetworkAudit {
 	}
 
 
-	protected HashMap<String, ArrayList<NE>> createNEList(String s) {
-		HashMap<String,ArrayList<NE>> ringsNEList = new HashMap<String,ArrayList<NE>>();
+	protected ConcurrentHashMap<String, ArrayList<NE>> createNEList(String s) {
+		ConcurrentHashMap<String,ArrayList<NE>> ringsNEList = new ConcurrentHashMap<String,ArrayList<NE>>();
 		try {
 			String[] servers = s.split(",");
 			String mapName = "";
 			int nes = 0;
 			int ringsNes = 0;
+			int ringsCount = 0;
 			for (int i = 0; i < servers.length; i++) {
-				HashSet<String> ringsName = new HashSet<String>();
+				HashSet<String> ringsNames = new HashSet<String>();
 				HashMap<String, NE> neList = new HashMap<String,NE>();
 				mapName = getMapNamefromFile(servers[i]);
 				MDBReader mdb = new MDBReader(servers[i], mapName);
@@ -145,10 +147,11 @@ public class NetworkAudit {
 				
 				while (itr.hasNext()) {
 					//if (((Map.Entry<String, NE>)itr.next()).getValue().getLocation()!="")
-					ringsName.add(((Map.Entry<String, NE>)itr.next()).getValue().getLocation());
+					ringsNames.add(((Map.Entry<String, NE>)itr.next()).getValue().getLocation());
 					nes++;
 				}
-				for (String ring : ringsName) {
+				ringsCount += ringsNames.size();
+				for (String ring : ringsNames) {
 					ArrayList<NE> neListinRing = new ArrayList<NE>();
 					Iterator<Entry<String, NE>> itr2 = neList.entrySet().iterator();
 					while (itr2.hasNext()) {
@@ -156,12 +159,13 @@ public class NetworkAudit {
 						if (ne.getLocation().equals(ring)) {
 							neListinRing.add(ne);
 							ringsNes++;
+							log.debug("!! ring "+ring+": "+ne.getName());
 						}
 					}
 					ringsNEList.put(ring, neListinRing);
 				}
 			}
-			log.debug("counted: "+nes+"; added:" +ringsNes);
+			log.debug("counted: "+nes+"; added:" +ringsNes+"; Rings: "+ringsCount);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -177,7 +181,7 @@ public class NetworkAudit {
 	/**
 	 * Print NE List with results
 	 */
-	public void printAll(HashMap<String, ArrayList<NE>> ringsNEList) {
+	public void printAll(ConcurrentHashMap<String, ArrayList<NE>> ringsNEList) {
 		try {
 			log.info("Print all called");
 			PrintWriter NEs = new PrintWriter(path+"NEs.csv", "UTF-8");

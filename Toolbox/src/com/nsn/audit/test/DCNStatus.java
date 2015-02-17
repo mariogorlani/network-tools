@@ -124,6 +124,7 @@ public class DCNStatus {
 			comtarget.setAddress(new UdpAddress(servers[i] + "/" + GenericDefinitions.port));
 			serversDCNStatus.addAll(Arrays.asList(readSNMPTable(comtarget, nvSvrNEMapTable)));
 		}
+		int total = 0;
 		int disconnected = 0;
 		int connected = 0;
 		int onLine = 0;
@@ -138,6 +139,7 @@ public class DCNStatus {
 		int warning = 0;
 
 		for (Iterator<String[]> it = serversDCNStatus.iterator(); it.hasNext();) {
+			total++;
 			String[] s = (String[]) it.next();
 			switch (Integer.valueOf(s[1])) {
 			case 0: disconnected++;
@@ -170,12 +172,15 @@ public class DCNStatus {
 			break;			
 			}
 		}
+		System.out.println("total: " + total);
 		System.out.println("disconnected: "+ disconnected +";");
-		System.out.println("connected: "+ connected +";");
+		System.out.println("connecting: "+ connected +";");
 		System.out.println("onLine: "+ onLine +";");
-		System.out.println("offLine: "+ offLine +";");
+		System.out.println("wrong password: "+ offLine +";");
+		System.out.println("------------------------------");
 		System.out.println("disabled: "+ disabled +";");
 		System.out.println("enabled: "+ enabled +";");
+		System.out.println("------------------------------");
 		System.out.println("cleared: "+ cleared +";");
 		System.out.println("indeterminate: "+ indeterminate +";");
 		System.out.println("critical: "+ critical +";");

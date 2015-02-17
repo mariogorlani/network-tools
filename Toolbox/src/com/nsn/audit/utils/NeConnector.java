@@ -55,6 +55,10 @@ public class NeConnector implements Runnable{
 		//this.sqlCon = new SQLConnection();
 		this.xNEs = xmlReader.getxNEs();
 		this.neList = neList;
+		int i =0;
+		for (NE ne : neList) {
+			System.out.println(++i +" "+ne.getName());
+		}
 		try {
 			transport = new DefaultUdpTransportMapping();
 			transport.listen();
@@ -259,7 +263,7 @@ public class NeConnector implements Runnable{
 			count++;
 			NE actualNE = itr.next();
 			log.info(Thread.currentThread().getName()+" start audit for "+ actualNE.getName()+"; " + count +"/"+neList.size());
-			try {
+		/*	try {
 				if (validateNE(actualNE)) {
 					comtarget.setAddress(new UdpAddress(actualNE.getIP() + "/" + GenericDefinitions.port));
 					comtarget.setCommunity(new OctetString(xNEs.get(actualNE.getType()).getPublicCommunity()));
@@ -273,6 +277,8 @@ public class NeConnector implements Runnable{
 				log.error("Audit failed for "+actualNE.getName() +" IP:"+actualNE.getIP()+".");
 			}
 			//printNEtoFiles(actualNE);
+			 * 
+			 */
 		}
 	}
 

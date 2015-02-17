@@ -38,17 +38,36 @@ public class MDBReader {
 			NE ne;
 			int count = 0;
 			int disabledNes = 0;
+			HashMap<String,String[]> mapsOwner = new HashMap<String,String[]>();
 			Connection conn=DriverManager.getConnection(url);
 			Statement st = conn.createStatement();
 			st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT ne.NE_NAME as name,  ne.ADDRESS as IP, ne.NE_STATUS_ENABLED as ConnStatus FROM NETWORK_ELEMENT AS ne");
-			if (rs != null) {
-				while (rs.next()) {
+			String sql = "SELECT ne.NE_NAME as name,  ne.ADDRESS as IP, MAP_OWNER_ID as map, ne.NE_STATUS_ENABLED as ConnStatus FROM NETWORK_ELEMENT AS ne";
+			ResultSet rsNE = st.executeQuery(sql);
+			sql = "select ID_POS as id, MAP_NAME, MAP_OWNER_ID as owner from MAP";
+			ResultSet rsMAP = st.executeQuery(sql);
+			if (rsMAP!=null){
+				while (rsMAP.next()){
+					mapsOwner.put(rsMAP.getString(1),new String[]{rsMAP.getString(2),rsMAP.getString(3)});
+				}
+			}
+			if (rsNE != null) {
+				while (rsNE.next()) {
 					count++;
-					ne = new NE(rs.getString("name"),rs.getString("IP"));
-					ne.setConnStatus(rs.getBoolean("ConnStatus")?GenericDefinitions.Online:GenericDefinitions.Disabled);
-					neList.put(rs.getString("name"),ne);
-					if (!rs.getBoolean("ConnStatus")) disabledNes++;
+					if (rsNE.getString("name").equals("85188_ZEA_11")) 
+						log.info("*********************ECCOTI****************");
+					ne = new NE(rsNE.getString("name"),rsNE.getString("IP"));
+					ne.setConnStatus(rsNE.getBoolean("ConnStatus")?GenericDefinitions.Online:GenericDefinitions.Disabled);
+					neList.put(rsNE.getString("name"),ne);
+					
+					if (!rsNE.getBoolean("ConnStatus")) disabledNes++;
+					String id = mapsOwner.get((rsNE.getString("map")))[1];
+					String location = mapsOwner.get((rsNE.getString("map")))[0];
+					while (!id.equals("1")){
+						location = mapsOwner.get(id)[0];
+						id = mapsOwner.get(id)[1];
+					}
+					ne.setLocation(location);
 				}
 			}
 			log.info("extractNEs: "+ server+ " map file contains "+count+"; including " +disabledNes +" disabled NEs");
@@ -74,11 +93,7 @@ public class MDBReader {
 			Connection conn=DriverManager.getConnection(url);
 			Statement st = conn.createStatement();
 			st = conn.createStatement();
-			/*String sql = "SELECT ne.NE_NAME as name, txt.TEXT_INFO as vfe FROM NETWORK_ELEMENT AS ne"+ 
-					" LEFT JOIN TEXT_INFO AS txt ON (ne.MAP_OWNER_ID=txt.MAP_OWNER_ID) AND "
-					+ "((abs(ne.POSITION_X-txt.POS_X)<90) And (abs(ne.POSITION_Y-txt.POS_Y)<20))"+
-					" WHERE txt.TEXT_INFO like '%VFE%'";
-			sql = "select ID_POS, TEXT_INFO, POS_X, POS_Y, MAP_OWNER_ID  from TEXT_INFO where TEXT_INFO like 'VFE%'";*/
+
 			String sql = "select t.text_info as vfe, odu1, odu2 " + 
 					"from text_info as t " + 
 					"inner join ( " + 
@@ -103,7 +118,7 @@ public class MDBReader {
 					}
 					else
 						log.debug(rsVFE.getString("vfe")+" doesn't match any NE for "+ rsVFE.getString("odu1"));
-						
+
 					ne = neList.get(rsVFE.getString("odu2"));
 					if (ne!=null){
 						ne.setVFE(rsVFE.getString("vfe")); 

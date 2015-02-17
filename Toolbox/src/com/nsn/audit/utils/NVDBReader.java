@@ -51,7 +51,7 @@ public class NVDBReader {
 					ne = neList.get(rs.getString("name"));
 					if (ne!=null){
 						ne.setType(rs.getString("type"));
-						ne.setLocation(rs.getString("path").split("\\\\")[2]);
+						//ne.setLocation(rs.getString("path").split("\\\\")[2]);
 						neList.put(rs.getString("name"),ne);
 					}
 					else
