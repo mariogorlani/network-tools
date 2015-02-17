@@ -54,8 +54,6 @@ public class MDBReader {
 			if (rsNE != null) {
 				while (rsNE.next()) {
 					count++;
-					if (rsNE.getString("name").equals("85188_ZEA_11")) 
-						log.info("*********************ECCOTI****************");
 					ne = new NE(rsNE.getString("name"),rsNE.getString("IP"));
 					ne.setConnStatus(rsNE.getBoolean("ConnStatus")?GenericDefinitions.Online:GenericDefinitions.Disabled);
 					neList.put(rsNE.getString("name"),ne);
@@ -67,7 +65,7 @@ public class MDBReader {
 						location = mapsOwner.get(id)[0];
 						id = mapsOwner.get(id)[1];
 					}
-					ne.setLocation(location);
+					ne.setLocation(server+"/"+location);
 				}
 			}
 			log.info("extractNEs: "+ server+ " map file contains "+count+"; including " +disabledNes +" disabled NEs");
