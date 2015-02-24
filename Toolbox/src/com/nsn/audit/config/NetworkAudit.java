@@ -64,8 +64,8 @@ public class NetworkAudit {
 		//servers = "uknetvae";
 		servers = "uknetvab,uknetvac,uknetvad,uknetvae,uknetvag,uknetvah,uknetvai,uknetvaj";
 		xmlInput = "devices.xml";
-		//path = "D:\\misc\\CRAMER\\";
-		path = "D:\\misc\\temp\\";
+		path = "D:\\misc\\CRAMER\\";
+		//path = "D:\\misc\\temp\\";
 		log.info("Network Audit running on the servers: " + servers);
 	} 
 
@@ -185,9 +185,9 @@ public class NetworkAudit {
 		try {
 			log.info("Print all called");
 			PrintWriter NEs = new PrintWriter(path+"NEs.csv", "UTF-8");
-			PrintWriter NE2s = new PrintWriter(path+"NE2s.csv", "UTF-8");
+			//PrintWriter NE2s = new PrintWriter(path+"NE2s.csv", "UTF-8");
 			NEs.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,ACM_Static_Tx_Profile,ACM_Most_Robust_profile,Synch");
-			NE2s.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,Ports,Tx,Rx,Max_Tx_Power,ATPC,Channel_Spacing,Licence");
+			//NE2s.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,Ports,Tx,Rx,Max_Tx_Power,ATPC,Channel_Spacing,Licence");
 			PrintWriter QoS = new PrintWriter(path+"QoS.csv", "UTF-8");
 			QoS.println("Date,Name,IP,QoSCriteriaEnabled,IPPriority,WFQSchedulerScheme,StaticMulticastTableEn,StrictPriorityQueueNum,"+
 					"WFQSchedulerQ8Weight,WFQSchedulerQ7Weight,WFQSchedulerQ6Weight,WFQSchedulerQ5Weight,WFQSchedulerQ4Weight,WFQSchedulerQ3Weight,"+
@@ -201,6 +201,7 @@ public class NetworkAudit {
 				ArrayList<NE> neList = ring.getValue();
 				Iterator<NE> itr = neList.iterator();
 				log.info("Start printing for " + ringName);
+				ringName = ringName.split("/")[1];
 				while (itr.hasNext()) {
 					NE ne = itr.next();
 					NEs.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+ringName+","+
@@ -211,7 +212,8 @@ public class NetworkAudit {
 							ne.getParam("ACM_Static_Tx_Profile")+","+
 							ne.getParam("ACM_Most_Robust_profile")+","+
 							ne.getParam("Synch"));
-					if (ne.getType().contains("FP")) {
+					/*
+					 if (ne.getType().contains("FP")) {
 						NE2s.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+ringName+","+
 								ne.getType()+","+
 								ne.getVFE()+","+
@@ -225,7 +227,7 @@ public class NetworkAudit {
 								ne.getParam("Channel")+","+
 								transformLicence(ne.getParam("License")));
 					}
-
+*/
 					if (ne.getType().contains("Radio")) {
 						RF.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+
 								ne.getParam("Tx")+","+
