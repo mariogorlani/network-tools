@@ -1,9 +1,14 @@
 package com.nsn.audit.test;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -113,79 +118,95 @@ public class DCNStatus {
 	}
 
 	public void start(){
-		CommunityTarget comtarget = new CommunityTarget();
-		comtarget.setVersion(snmpVersion);
-		comtarget.setRetries(retries);
-		comtarget.setTimeout(timeout);
-		comtarget.setCommunity(readonlyCommunity);
-		List<String[]> serversDCNStatus = new ArrayList<String[]>();
-		for (int i = 0; i < servers.length; i++) {
-			System.out.println(servers[i]+": " + new Timestamp(System.currentTimeMillis()));
-			comtarget.setAddress(new UdpAddress(servers[i] + "/" + GenericDefinitions.port));
-			serversDCNStatus.addAll(Arrays.asList(readSNMPTable(comtarget, nvSvrNEMapTable)));
-		}
-		int total = 0;
-		int disconnected = 0;
-		int connected = 0;
-		int onLine = 0;
-		int offLine = 0;
-		int disabled = 0;
-		int enabled = 0;
-		int cleared = 0;
-		int indeterminate = 0;
-		int critical = 0;
-		int major = 0;
-		int minor = 0;
-		int warning = 0;
+		try {
+			CommunityTarget comtarget = new CommunityTarget();
+			comtarget.setVersion(snmpVersion);
+			comtarget.setRetries(retries);
+			comtarget.setTimeout(timeout);
+			comtarget.setCommunity(readonlyCommunity);
+			List<String[]> serversDCNStatus = new ArrayList<String[]>();
+			Date date = new Date();
+			SimpleDateFormat dateF = new SimpleDateFormat("yyyy/MM/dd");
+			SimpleDateFormat timeF = new SimpleDateFormat("HH:mm");
+			for (int i = 0; i < servers.length; i++) {
+				log.info(servers[i]+": " + new Timestamp(System.currentTimeMillis()));
+				comtarget.setAddress(new UdpAddress(servers[i] + "/" + GenericDefinitions.port));
+				serversDCNStatus.addAll(Arrays.asList(readSNMPTable(comtarget, nvSvrNEMapTable)));
+			}
+			int total = 0;
+			int disconnected = 0;
+			int connected = 0;
+			int onLine = 0;
+			int offLine = 0;
+			int disabled = 0;
+			int enabled = 0;
+			int cleared = 0;
+			int indeterminate = 0;
+			int critical = 0;
+			int major = 0;
+			int minor = 0;
+			int warning = 0;
 
-		for (Iterator<String[]> it = serversDCNStatus.iterator(); it.hasNext();) {
-			total++;
-			String[] s = (String[]) it.next();
-			switch (Integer.valueOf(s[1])) {
-			case 0: disconnected++;
-			break;
-			case 1: connected++;
-			break;
-			case 2: onLine++;
-			break;
-			case 3: offLine++;
-			break;
+			for (Iterator<String[]> it = serversDCNStatus.iterator(); it.hasNext();) {
+				total++;
+				String[] s = (String[]) it.next();
+				log.info(Arrays.toString(s));
+				if (s[1]!=null)
+					switch (Integer.valueOf(s[1])) {
+					case 0: disconnected++;
+					break;
+					case 1: connected++;
+					break;
+					case 2: onLine++;
+					break;
+					case 3: offLine++;
+					break;
+					}
+				if (s[2]!=null)
+					switch (Integer.valueOf(s[2])) {
+					case 0: disabled++;
+					break;
+					case 1: enabled++;
+					break;
+					}
+				if (s[4]!=null)
+					switch (Integer.valueOf(s[4])) {
+					case 1: cleared++;
+					break;
+					case 2: indeterminate++;
+					break;
+					case 3: critical++;
+					break;
+					case 4: major++;
+					break;
+					case 5: minor++;
+					break;
+					case 6: warning++;
+					break;			
+					}
 			}
-			switch (Integer.valueOf(s[2])) {
-			case 0: disabled++;
-			break;
-			case 1: enabled++;
-			break;
-			}
-			switch (Integer.valueOf(s[4])) {
-			case 1: cleared++;
-			break;
-			case 2: indeterminate++;
-			break;
-			case 3: critical++;
-			break;
-			case 4: major++;
-			break;
-			case 5: minor++;
-			break;
-			case 6: warning++;
-			break;			
-			}
+			log.info("total: " + total);
+			log.info("disconnected: "+ disconnected +";");
+			log.info("connecting: "+ connected +";");
+			log.info("onLine: "+ onLine +";");
+			log.info("wrong password: "+ offLine +";");
+			log.info("------------------------------");
+			log.info("disabled: "+ disabled +";");
+			log.info("enabled: "+ enabled +";");
+			log.info("------------------------------");
+			log.info("cleared: "+ cleared +";");
+			log.info("indeterminate: "+ indeterminate +";");
+			log.info("critical: "+ critical +";");
+			log.info("major: "+ major +";");
+			log.info("minor: "+ minor +";");
+			log.info("warning: "+ warning +";");
+
+			PrintWriter DCNStatus = new PrintWriter(new FileOutputStream(new File("d:/misc/DCN_Status/BEP2_DCN_Status.csv"), true));
+			DCNStatus.append(System.getProperty("line.separator")+dateF.format(date)+","+timeF.format(date)+","+total+","+disconnected+","+onLine+","+connected+","+offLine+","+disabled+","+enabled);
+			DCNStatus.close();
 		}
-		System.out.println("total: " + total);
-		System.out.println("disconnected: "+ disconnected +";");
-		System.out.println("connecting: "+ connected +";");
-		System.out.println("onLine: "+ onLine +";");
-		System.out.println("wrong password: "+ offLine +";");
-		System.out.println("------------------------------");
-		System.out.println("disabled: "+ disabled +";");
-		System.out.println("enabled: "+ enabled +";");
-		System.out.println("------------------------------");
-		System.out.println("cleared: "+ cleared +";");
-		System.out.println("indeterminate: "+ indeterminate +";");
-		System.out.println("critical: "+ critical +";");
-		System.out.println("major: "+ major +";");
-		System.out.println("minor: "+ minor +";");
-		System.out.println("warning: "+ warning +";");
+		catch(Exception e) {
+			log.error(e);
+		}
 	}
 }

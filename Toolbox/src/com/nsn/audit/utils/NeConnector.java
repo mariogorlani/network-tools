@@ -222,7 +222,7 @@ public class NeConnector implements Runnable{
 							config[0] = xParam.getValue().getEnums().get(result);
 						else
 							config[0] = result;
-						actualNE.setConnStatus(GenericDefinitions.Online);
+						//actualNE.setConnStatus(GenericDefinitions.Online);
 					}
 					collectedParam.setConfig(config);
 					collectedParams.put(xParam.getKey(), collectedParam);
@@ -238,7 +238,7 @@ public class NeConnector implements Runnable{
 						if (!xParam.getValue().getOrder()) 
 							Arrays.sort(result);
 						collectedParam.setConfig(result);
-						actualNE.setConnStatus(GenericDefinitions.Online);
+						//actualNE.setConnStatus(GenericDefinitions.Online);
 					}
 					collectedParams.put(xParam.getKey(), collectedParam);
 				}

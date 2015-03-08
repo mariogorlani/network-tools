@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ import com.nsn.audit.dataset.NE;
 import com.nsn.audit.utils.MDBReader;
 import com.nsn.audit.utils.NVDBReader;
 import com.nsn.audit.utils.NeConnector;
+import com.nsn.audit.utils.SNMPConnection;
 import com.nsn.audit.xml.XMLReader;
 
 /**
@@ -61,7 +63,7 @@ public class NetworkAudit {
 	}
 
 	public NetworkAudit(String[] args) {
-		//servers = "uknetvae";
+		//servers = "uknetvai";
 		servers = "uknetvab,uknetvac,uknetvad,uknetvae,uknetvag,uknetvah,uknetvai,uknetvaj";
 		xmlInput = "devices.xml";
 		path = "D:\\misc\\CRAMER\\";
@@ -127,57 +129,59 @@ public class NetworkAudit {
 
 	protected ConcurrentHashMap<String, ArrayList<NE>> createNEList(String s) {
 		ConcurrentHashMap<String,ArrayList<NE>> ringsNEList = new ConcurrentHashMap<String,ArrayList<NE>>();
-		try {
-			String[] servers = s.split(",");
-			String mapName = "";
-			int nes = 0;
-			int ringsNes = 0;
-			int ringsCount = 0;
-			for (int i = 0; i < servers.length; i++) {
-				HashSet<String> ringsNames = new HashSet<String>();
-				HashMap<String, NE> neList = new HashMap<String,NE>();
+		String[] servers = s.split(",");
+		String mapName = "";
+		int nes = 0;
+		int ringsNes = 0;
+		int ringsCount = 0;
+		for (int i = 0; i < servers.length; i++) {
+			HashSet<String> ringsNames = new HashSet<String>();
+			HashMap<String, NE> neList = new HashMap<String,NE>();
+			try {
 				mapName = getMapNamefromFile(servers[i]);
 				MDBReader mdb = new MDBReader(servers[i], mapName);
 				NVDBReader nvDB = new NVDBReader(servers[i], mapName);
+				SNMPConnection snmpConn = new SNMPConnection(InetAddress.getByName(servers[i]).getHostAddress()); 
 				neList = mdb.extractNEs();
 				neList = mdb.extractVFEs(neList);
 				neList = nvDB.extractType(neList);
 				neList = nvDB.extractDisconnections(neList);
-				Iterator<Entry<String, NE>> itr = neList.entrySet().iterator();
-				
-				while (itr.hasNext()) {
-					//if (((Map.Entry<String, NE>)itr.next()).getValue().getLocation()!="")
-					ringsNames.add(((Map.Entry<String, NE>)itr.next()).getValue().getLocation());
-					nes++;
-				}
-				ringsCount += ringsNames.size();
-				for (String ring : ringsNames) {
-					ArrayList<NE> neListinRing = new ArrayList<NE>();
-					Iterator<Entry<String, NE>> itr2 = neList.entrySet().iterator();
-					while (itr2.hasNext()) {
-						NE ne = ((Map.Entry<String, NE>)itr2.next()).getValue();
-						if (ne.getLocation().equals(ring)) {
-							neListinRing.add(ne);
-							ringsNes++;
-							log.debug("!! ring "+ring+": "+ne.getName());
-						}
-					}
-					ringsNEList.put(ring, neListinRing);
-				}
+				neList = snmpConn.queryStatus(neList);
+			} catch (Exception e) {
+				log.error(servers[i]+"failed to get neList! ",e);
 			}
-			log.debug("counted: "+nes+"; added:" +ringsNes+"; Rings: "+ringsCount);
-		} catch (Exception e) {
-			e.printStackTrace();
+			Iterator<Entry<String, NE>> itr = neList.entrySet().iterator();
+
+			while (itr.hasNext()) {
+				//if (((Map.Entry<String, NE>)itr.next()).getValue().getLocation()!="")
+				ringsNames.add(((Map.Entry<String, NE>)itr.next()).getValue().getLocation());
+				nes++;
+			}
+			ringsCount += ringsNames.size();
+			for (String ring : ringsNames) {
+				ArrayList<NE> neListinRing = new ArrayList<NE>();
+				Iterator<Entry<String, NE>> itr2 = neList.entrySet().iterator();
+				while (itr2.hasNext()) {
+					NE ne = ((Map.Entry<String, NE>)itr2.next()).getValue();
+					if (ne.getLocation().equals(ring)) {
+						neListinRing.add(ne);
+						ringsNes++;
+						log.debug("!! ring "+ring+": "+ne.getName());
+					}
+				}
+				ringsNEList.put(ring, neListinRing);
+			}
 		}
+		log.debug("counted: "+nes+"; added:" +ringsNes+"; Rings: "+ringsCount);
 
 		return ringsNEList;
 	}
-	
+
 	public static String transformLicence(String lic)
 	{
 		return Integer.toBinaryString(Integer.valueOf((lic.matches("\\d+"))?lic:"0"));
 	}
-	
+
 	/**
 	 * Print NE List with results
 	 */
@@ -185,9 +189,9 @@ public class NetworkAudit {
 		try {
 			log.info("Print all called");
 			PrintWriter NEs = new PrintWriter(path+"NEs.csv", "UTF-8");
-			//PrintWriter NE2s = new PrintWriter(path+"NE2s.csv", "UTF-8");
+			PrintWriter interfaces = new PrintWriter(path+"interfaces.csv", "UTF-8");
 			NEs.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,ACM_Static_Tx_Profile,ACM_Most_Robust_profile,Synch");
-			//NE2s.println("Date,Name,IP,Ring,Type,VFE,Status,Disconnections,Ports,Tx,Rx,Max_Tx_Power,ATPC,Channel_Spacing,Licence");
+			interfaces.println("Date,Name,IP,Ring,Type,VFE,Status,Ports");
 			PrintWriter QoS = new PrintWriter(path+"QoS.csv", "UTF-8");
 			QoS.println("Date,Name,IP,QoSCriteriaEnabled,IPPriority,WFQSchedulerScheme,StaticMulticastTableEn,StrictPriorityQueueNum,"+
 					"WFQSchedulerQ8Weight,WFQSchedulerQ7Weight,WFQSchedulerQ6Weight,WFQSchedulerQ5Weight,WFQSchedulerQ4Weight,WFQSchedulerQ3Weight,"+
@@ -212,8 +216,14 @@ public class NetworkAudit {
 							ne.getParam("ACM_Static_Tx_Profile")+","+
 							ne.getParam("ACM_Most_Robust_profile")+","+
 							ne.getParam("Synch"));
-					/*
-					 if (ne.getType().contains("FP")) {
+
+					if (ne.getType().contains("FP")) 
+						interfaces.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+ringName+","+
+								ne.getType()+","+
+								ne.getVFE()+","+
+								ne.getConnStatus()+","+
+								ne.getParam("Interfaces"));
+					/*					 if (ne.getType().contains("FP")) {
 						NE2s.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+ringName+","+
 								ne.getType()+","+
 								ne.getVFE()+","+
@@ -226,8 +236,8 @@ public class NetworkAudit {
 								ne.getParam("ATPC")+","+
 								ne.getParam("Channel")+","+
 								transformLicence(ne.getParam("License")));
-					}
-*/
+					}*/
+
 					if (ne.getType().contains("Radio")) {
 						RF.println(dateFormat.format(date)+","+ne.getName()+","+ne.getIP()+","+
 								ne.getParam("Tx")+","+
@@ -261,6 +271,7 @@ public class NetworkAudit {
 			NEs.close();
 			QoS.close();
 			RF.close();
+			interfaces.close();
 		} catch (Exception e) {
 			log.error("PrintAll failed " + e);
 		}

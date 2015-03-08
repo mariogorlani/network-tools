@@ -102,7 +102,7 @@ public class NVDBReader {
 	/*
 	 * Get performance data for nes
 	 */
-	public HashMap<String,String> getAllPerformanceData(String table, String counter, String label, String dayoffset, String nes){
+	public HashMap<String,String> getAllPerformanceData(String table, String counter, String label, String dayoffset){
 		String sql =  "( SELECT name AS Name, tp_name AS Port, cast(time_start AS date) AS Date , '@label' AS KPI "+ 
 				"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*0),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*0),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*1),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*1),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*2),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*2),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(0*60)+(15*3),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(0*60)+(15*3),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour00Min45 " + 
 				"  , SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*0),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*0),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min00, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*1),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*1),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min15, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*2),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*2),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min30, SUM(cast(CASE WHEN ((time_start<=dateadd(n,(1*60)+(15*3),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime))) and (time_end>=dateadd(n,(1*60)+(15*3),cast(DATEADD(day, @dayoffset, cast(GETDATE() AS date))AS datetime)))) THEN KPI END AS BigInt)) AS Hour01Min45 " + 
@@ -141,7 +141,7 @@ public class NVDBReader {
 				"	 ON ((NetViewer.dbo.@table.ne_sub_id = NetViewer.dbo.ne_working_mode_g.sub_id) " + 
 				"		AND (NetViewer.dbo.@table.ne_working_mode_id = NetViewer.dbo.ne_working_mode_g.id)) " + 
 				"WHERE (cast(@table.date_time AS date) = cast(DATEADD(day, @dayoffset, GETDATE()) AS date)) " +
-				"and ne_working_mode_g.name in (@nes)" + 
+				//"and ne_working_mode_g.name in (@nes)" + 
 				"GROUP BY @table.date_time, " + 
 				"		 @table.date_time_end ,@table.tp_name, " + 
 				"		 ne_working_mode_g.name " + 
@@ -152,7 +152,7 @@ public class NVDBReader {
 		sql = sql.replace("@label", label);
 		sql = sql.replace("@counter", counter);
 		sql = sql.replace("@dayoffset", dayoffset);
-		sql = sql.replace("@nes", nes);
+		//sql = sql.replace("@nes", nes);
 		log.info(Thread.currentThread().getName()+" Server: "+server+" "+ table+", "+label+", "+counter+", day "+dayoffset);
 		return getAllPerformanceData(sql);
 	}

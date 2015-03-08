@@ -4,7 +4,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n" />
         </Console>
-        <File name="MyFile" fileName="d:/misc/cramer/export.log" immediateFlush="true" append="false">
+        <File name="MyFile" fileName="export.log" immediateFlush="true" append="false">
             <PatternLayout pattern="%-6level %d{yyy-MM-dd HH:mm:ss}[%logger{2}] %msg%n"/>
         </File>
     </Appenders>
